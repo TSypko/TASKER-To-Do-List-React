@@ -1,5 +1,5 @@
 
-<p align="center"> <img src="%PUBLIC_URL%/share-mini.png" />
+<p align="center"> <img src="https://tsypko.github.io/TASKER-To-Do-List-React/share-mini.png" />
 </p>
 
 # TASKER - TO DO LIST MANAGMENT
