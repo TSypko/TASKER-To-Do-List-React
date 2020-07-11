@@ -18,8 +18,8 @@ const Buttons = ({ tasks, hideDoneTasks }) => {
 
 
         <React.Fragment>
-            <button className={`button button--doneAllButton ${doneTasks ? "disabled" : ""}`}>set all as done</button>
-            <button className={`button button--hideDoneButton ${undoneTasks ? "disabled" : ""}`}>
+            <button className="button button--doneAllButton" disabled={doneTasks ? "disabled" : ""}>set all as done</button>
+            <button className="button button--hideDoneButton" disabled={undoneTasks ? "disabled" : ""}>
                 {hideDoneTasks ? "show" : "hide"} done</button>
             <button className="button button--removeAllButton">remove all tasks</button>
         </React.Fragment>
