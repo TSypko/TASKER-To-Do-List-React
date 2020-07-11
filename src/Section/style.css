@@ -10,6 +10,13 @@
 .section--footer {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 399px) {
+    .section--footer {
+        justify-content: center;
+    }
 }
 
 .section__header {
