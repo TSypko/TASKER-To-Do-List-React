@@ -28,7 +28,7 @@ function App() {
         <Section title="add new task" body={<Form placeHolderText={"write your task here"} />} />
         <Section title="task list" body={<Tasks key={tasks} tasks={tasks} hideDoneTasks={hideDoneTasks} />} />
       </Main>
-      <Footer>
+      <Footer tasks={tasks}>
         <Section classModificator={"section--footer"} body={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />} />
       </Footer>
     </React.Fragment>
