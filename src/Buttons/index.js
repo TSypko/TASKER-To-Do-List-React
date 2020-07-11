@@ -13,10 +13,7 @@ const Buttons = ({ tasks, hideDoneTasks }) => {
     const undoneTasks = tasks.every(isTaskUndone);
     const doneTasks = tasks.every(isTaskDone);
     if (tasks.length === 0) { return null; }
-
     return (
-
-
         <React.Fragment>
             <button className="button button--doneAllButton" disabled={doneTasks ? "disabled" : ""}>set all as done</button>
             <button className="button button--hideDoneButton" disabled={undoneTasks ? "disabled" : ""}>
