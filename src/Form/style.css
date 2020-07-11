@@ -42,3 +42,16 @@
     margin-left: 0px;
   }
 }
+
+.form__button--addButton:hover {
+  background-color: var(--section-bg-color);
+  color: var(--section-text-color);
+  border: 1px solid var(--section-text-color);
+  font-weight: bold;
+  padding-left: 7px;
+}
+
+.form__button--addButton:active {
+  border: 1px solid var(--section-text-color);
+  transform: scale(0.9);
+}
