@@ -1,0 +1,103 @@
+.task__button {
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: color 0.4s;
+    transition: transform 0.1s;
+}
+
+.task__button--doneButton {
+    background-color: var(--greenButton--color);
+    border-radius: 5px;
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+    transition: background-color 0.4s;
+}
+
+.task__button--doneButton:hover {
+    background-color: var(--greenButtonLighter--color);
+}
+
+.task__button--doneButtonToggled {
+    background-image: url(checked.svg);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: center;
+}
+
+.task__button--doneButton:active {
+    transform: scale(0.85);
+}
+
+.task__button--deleteButton {
+    background-color: var(--redButton--color);
+    background-image: url(trash.svg);
+    background-repeat: no-repeat;
+    background-size: 85%;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 15px;
+    transition: background-color 0.4s;
+}
+
+.task__button--deleteButton:hover {
+    background-color: var(--redButtonLighter--color);
+}
+
+.task__button--deleteButton:active {
+    transform: scale(0.85);
+}
+
+@media (max-width: 575px) {
+    .task__button--doneButton::before {
+        padding: 5px 10px;
+    }
+    .task__button--deleteButton::before {
+        padding: 5px 10px;
+    }
+}
+
+.task__list {
+    list-style: none;
+    padding-left: 0px;
+    background-color: var(--section-bg-color);
+}
+
+.task__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--section-text-color);
+}
+
+@media (max-width: 175px) {
+    .task__item {
+        flex-wrap: wrap;
+    }
+}
+
+.task__item--hidden {
+    display: none;
+}
+
+.task__paragraph {
+    font-weight: 400;
+    max-width: 100%;
+    text-align: justify;
+    flex-grow: 1;
+    font-size: 20px;
+}
+
+.task__paragraph--done {
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+@media (max-width: 575px) {
+    .task__paragraph {
+        font-size: 16px;
+    }
+}

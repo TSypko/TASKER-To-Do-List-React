@@ -1,0 +1,12 @@
+.logo {
+  align-self: center;
+  margin: 10px;
+  width: 70px;
+  filter: var(--svg-image--color);
+}
+
+@media (max-width: 767px) {
+  .logo {
+    max-width: 60%;
+  }
+}
