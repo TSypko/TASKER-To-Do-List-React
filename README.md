@@ -3,7 +3,7 @@
 </p>
 
 # TASKER - TO DO LIST MANAGMENT
-### `LIVE LINK:` [https://tsypko.github.io/Simple-To-Do-List/](https://tsypko.github.io/Simple-To-Do-List/)
+### `LIVE LINK:` [https://tsypko.github.io/TASKER-To-Do-List-React/](https://tsypko.github.io/TASKER-To-Do-List-React/)
 
 - v. 0.1 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
