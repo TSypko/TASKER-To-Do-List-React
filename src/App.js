@@ -12,7 +12,8 @@ import Buttons from './Buttons';
 
 const tasks = [
   { id: 1, content: "Oglądnąć lekcje o React", done: true },
-  { id: 2, content: "Eksport To Do List do Reacta", done: false },
+  { id: 2, content: "Eksport To Do List do Reacta", done: true },
+  { id: 3, content: "Dodać interakcje", done: false },
 ];
 const hideDoneTasks = false;
 
