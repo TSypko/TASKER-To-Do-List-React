@@ -1,10 +1,10 @@
 import React from 'react';
 import "./style.css";
 
-const Footer = ({ children }) => (
+const Footer = ({ tasks, children }) => (
     <footer className="footer">
-        {children}
+     {tasks.length > 0 && [children]}
     </footer>
-);
+    )     
 
 export default Footer;
