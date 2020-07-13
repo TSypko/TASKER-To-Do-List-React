@@ -17,33 +17,23 @@
   text-transform: uppercase;
   cursor: pointer;
   border: none;
-  transition: color 0.4s;
-  transition: transform 0.1s;
-}
-
-@media (max-width: 575px) {
-  .form__button {
-    margin-top: 10px;
-  }
-}
-
-.form__button--addButton {
   min-width: max-content;
   background-color: var(--section-text-color);
   color: var(--section-bg-color);
   letter-spacing: 1px;
   padding: 10px 10px;
   margin-left: 10px;
-  transition: background-color 0.4s;
+  transition: color 0.4s, transform 0.1s, background-color 0.4s;
 }
 
 @media (max-width: 575px) {
-  .form__button--addButton {
+  .form__button {
+    margin-top: 10px;
     margin-left: 0px;
   }
 }
 
-.form__button--addButton:hover {
+.form__button:hover {
   background-color: var(--section-bg-color);
   color: var(--section-text-color);
   border: 1px solid var(--section-text-color);
@@ -51,7 +41,7 @@
   padding-left: 7px;
 }
 
-.form__button--addButton:active {
+.form__button:active {
   border: 1px solid var(--section-text-color);
   transform: scale(0.9);
 }

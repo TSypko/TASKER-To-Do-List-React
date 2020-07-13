@@ -9,7 +9,7 @@ const Form = () => (
             autoFocus
             placeholder="write your task here"
         />
-        <button className="form__button form__button--addButton">
+        <button className="form__button">
             submit
             </button>
     </form>
