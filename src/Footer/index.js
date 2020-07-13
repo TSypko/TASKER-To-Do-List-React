@@ -7,7 +7,7 @@ const Footer = ({ tasks, hideDoneTasks }) => (
     <footer className="footer">
         {tasks.length > 0 && (
             <Section
-                classModificator={"section--footer"}
+                sectionType={"section--footer"}
                 body={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />}
             />
         )}
