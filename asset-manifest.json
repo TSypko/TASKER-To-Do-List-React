@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/TASKER-To-Do-List-React/static/css/main.2edfae42.chunk.css",
-    "main.js": "/TASKER-To-Do-List-React/static/js/main.5c50c1eb.chunk.js",
-    "main.js.map": "/TASKER-To-Do-List-React/static/js/main.5c50c1eb.chunk.js.map",
+    "main.css": "/TASKER-To-Do-List-React/static/css/main.cccd4cfb.chunk.css",
+    "main.js": "/TASKER-To-Do-List-React/static/js/main.c8f70248.chunk.js",
+    "main.js.map": "/TASKER-To-Do-List-React/static/js/main.c8f70248.chunk.js.map",
     "runtime-main.js": "/TASKER-To-Do-List-React/static/js/runtime-main.5c57046c.js",
     "runtime-main.js.map": "/TASKER-To-Do-List-React/static/js/runtime-main.5c57046c.js.map",
-    "static/js/2.27e32e5c.chunk.js": "/TASKER-To-Do-List-React/static/js/2.27e32e5c.chunk.js",
-    "static/js/2.27e32e5c.chunk.js.map": "/TASKER-To-Do-List-React/static/js/2.27e32e5c.chunk.js.map",
+    "static/js/2.7cee9ce1.chunk.js": "/TASKER-To-Do-List-React/static/js/2.7cee9ce1.chunk.js",
+    "static/js/2.7cee9ce1.chunk.js.map": "/TASKER-To-Do-List-React/static/js/2.7cee9ce1.chunk.js.map",
     "index.html": "/TASKER-To-Do-List-React/index.html",
-    "precache-manifest.3314dc08428a9e0ac238964ab1498dcb.js": "/TASKER-To-Do-List-React/precache-manifest.3314dc08428a9e0ac238964ab1498dcb.js",
+    "precache-manifest.caa6a76308ef2919148915388010974e.js": "/TASKER-To-Do-List-React/precache-manifest.caa6a76308ef2919148915388010974e.js",
     "service-worker.js": "/TASKER-To-Do-List-React/service-worker.js",
-    "static/css/main.2edfae42.chunk.css.map": "/TASKER-To-Do-List-React/static/css/main.2edfae42.chunk.css.map",
-    "static/js/2.27e32e5c.chunk.js.LICENSE.txt": "/TASKER-To-Do-List-React/static/js/2.27e32e5c.chunk.js.LICENSE.txt",
+    "static/css/main.cccd4cfb.chunk.css.map": "/TASKER-To-Do-List-React/static/css/main.cccd4cfb.chunk.css.map",
+    "static/js/2.7cee9ce1.chunk.js.LICENSE.txt": "/TASKER-To-Do-List-React/static/js/2.7cee9ce1.chunk.js.LICENSE.txt",
     "static/media/style.css": "/TASKER-To-Do-List-React/static/media/trash.04d13a08.svg",
     "static/media/logo.svg": "/TASKER-To-Do-List-React/static/media/logo.808985cb.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.5c57046c.js",
-    "static/js/2.27e32e5c.chunk.js",
-    "static/css/main.2edfae42.chunk.css",
-    "static/js/main.5c50c1eb.chunk.js"
+    "static/js/2.7cee9ce1.chunk.js",
+    "static/css/main.cccd4cfb.chunk.css",
+    "static/js/main.c8f70248.chunk.js"
   ]
 }
