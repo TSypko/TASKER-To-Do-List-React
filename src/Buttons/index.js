@@ -1,10 +1,10 @@
 import React from 'react';
 import "./style.css";
 
-const Buttons = ({ tasks, hideDone, toggleHide }) => (
+const Buttons = ({ tasks, hideDone, toggleHide, setAllDone }) => (
     tasks.length > 0 && (
         <>
-            <button className="button button--doneAllButton"
+            <button onClick={setAllDone} className="button button--doneAllButton"
                 disabled={tasks.every(({ done }) => done)}>set all as done</button>
             <button onClick={toggleHide} className="button button--hideDoneButton"
                 disabled={tasks.every(({ done }) => !done || undefined)}>

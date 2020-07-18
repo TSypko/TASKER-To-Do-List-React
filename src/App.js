@@ -13,17 +13,23 @@ function App() {
     { id: 1, content: "Oglądnąć lekcje o React", done: true },
     { id: 2, content: "Eksport To Do List do Reacta", done: true },
     { id: 3, content: "Dodać interakcje", done: false }
-  ])
+  ]);
 
-  const [hideDone, setHideDone] = useState(false)
+  const [hideDone, setHideDone] = useState(false);
   const toggleHide = () => {
     setHideDone(hideDone => !hideDone);
-  }
+  };
 
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id))
 
-  }
+  };
+
+  const setAllDone = () => {
+    setTasks(tasks => tasks.map(task => ({ ...task, done: true })))
+
+  };
+
 
   return (
     <>
@@ -35,10 +41,18 @@ function App() {
           body={<Form />} />
         <Section
           title="task list"
-          body={<Tasks tasks={tasks} hideDone={hideDone} removeTask={removeTask} />} />
+          body={<Tasks
+            tasks={tasks}
+            hideDone={hideDone}
+            removeTask={removeTask}
+          />} />
       </Main>
       <Footer
-        tasks={tasks} hideDone={hideDone} toggleHide={toggleHide} />
+        tasks={tasks}
+        hideDone={hideDone}
+        toggleHide={toggleHide}
+        setAllDone={setAllDone}
+      />
     </>
   );
 }
