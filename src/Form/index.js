@@ -9,7 +9,6 @@ const Form = ({ addTask }) => {
         event.preventDefault();
         addTask(newTaskContent.trim());
         setNewTaskContent("");
-
     };
 
     return (
