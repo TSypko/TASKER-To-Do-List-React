@@ -3,25 +3,25 @@
 </p>
 
 # TASKER - TO DO LIST MANAGMENT
-### `LIVE LINK:` [https://tsypko.github.io/TASKER-To-Do-List-React/](https://tsypko.github.io/TASKER-To-Do-List-React/)
+**`LIVE LINK:`** [https://tsypko.github.io/TASKER-To-Do-List-React/](https://tsypko.github.io/TASKER-To-Do-List-React/)
 
 - v. 0.1 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### `DESCRIPTION`
+## `DESCRIPTION`
 To Do List app created during ,*,Become A Front End Developer"* course provided by *Youcode Academy*.
 It helps in scheduling tasks, allowing you to add, check and delete them.
 
-###### * Important! Tasks are currently non-saveable.
-#### `TECHNOLOGIES USED:`
+ Important! Tasks are currently non-saveable.
+### `TECHNOLOGIES USED:`
 
 - REACT.js
 - creat-react-app
 - HTML
 - CSS
-- JavaScript ES6
+- JavaScript ES6+
 
 
-#### `METHODOLOGIES USED:`
+### `METHODOLOGIES USED:`
 
 - BEM convention
 - JSX
@@ -33,19 +33,19 @@ It helps in scheduling tasks, allowing you to add, check and delete them.
 3. You can add tasks continuously after every **ENTER** pressing.
 4. Once you will add task, it will be shown on list below called **TASK LIST** 
 5. You can check task if it's done by clicking 
-```diff
+
 + GREEN BUTTON
-```
+
 6. You can  remove task if it's done by clicking 
-```diff
+
 - RED BUTTON
-```
+
 7. Optional, you can use **SET ALL TASKS DONE** to check all tasks, use **HIDE DONE** to make done tasks hidden or use **REMOVE ALL** to delete all tasks.
 
 ![usage-gif](https://raw.githubusercontent.com/TSypko/Simple-To-Do-List/master/images/toDoList__usage.gif)
 
 
-#### **NIGHT MODE**
+### **NIGHT MODE**
 
 There is availability to change theme to dark usin switch called **Night Mode**
 
