@@ -16,6 +16,7 @@
 .button--doneAllButton {
     background-color: var(--greenButton--color);
     border-radius: 5px;
+    transition: 0.5s;
 }
 
 .button--doneAllButton:hover {
@@ -31,6 +32,7 @@
 .button--hideDoneButton {
     background-color: var(--greenButton--color);
     border-radius: 5px;
+    transition: 0.3s;
 }
 
 .button--hideDoneButton:hover {
