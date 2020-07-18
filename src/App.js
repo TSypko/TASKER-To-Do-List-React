@@ -12,7 +12,7 @@ const tasks = [
   { id: 2, content: "Eksport To Do List do Reacta", done: true },
   { id: 3, content: "Dodać interakcje", done: false },
 ];
-const hideDoneTasks = false;
+const hideDone = false;
 
 function App() {
   return (
@@ -21,9 +21,9 @@ function App() {
       <Header title="TASKER" />
       <Main>
         <Section title="add new task" body={<Form />} />
-        <Section title="task list" body={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />} />
+        <Section title="task list" body={<Tasks tasks={tasks} hideDone={hideDone} />} />
       </Main>
-      <Footer tasks={tasks} hideDoneTasks={hideDoneTasks}/>
+      <Footer tasks={tasks} hideDone={hideDone}/>
     </>
   );
 }
