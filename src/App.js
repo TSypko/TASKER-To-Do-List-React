@@ -20,6 +20,17 @@ function App() {
     setHideDone(hideDone => !hideDone);
   };
 
+  const addTask = (newTaskContent) => {
+    setTasks(tasks => [
+      ...tasks,
+      {
+        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
+        content: newTaskContent,
+        done: false
+      }
+    ]);
+  };
+
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id))
 
@@ -51,7 +62,7 @@ function App() {
       <Main>
         <Section
           title="add new task"
-          body={<Form />} />
+          body={<Form addTask={addTask} />} />
         <Section
           title="task list"
           body={<Tasks
