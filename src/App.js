@@ -39,6 +39,10 @@ function App() {
 
   };
 
+  const removeAllTasks = () => {
+    setTasks(tasks => tasks = [])
+  };
+
 
   return (
     <>
@@ -62,6 +66,7 @@ function App() {
         hideDone={hideDone}
         toggleHide={toggleHide}
         setAllDone={setAllDone}
+        removeAllTasks={removeAllTasks}
       />
     </>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style.css";
 
-const Buttons = ({ tasks, hideDone, toggleHide, setAllDone }) => (
+const Buttons = ({ tasks, hideDone, toggleHide, setAllDone, removeAllTasks }) => (
     tasks.length > 0 && (
         <>
             <button onClick={setAllDone} className="button button--doneAllButton"
@@ -9,7 +9,7 @@ const Buttons = ({ tasks, hideDone, toggleHide, setAllDone }) => (
             <button onClick={toggleHide} className="button button--hideDoneButton"
                 disabled={tasks.every(({ done }) => !done || undefined)}>
                 {hideDone ? "show" : "hide"} done</button>
-            <button className="button button--removeAllButton">remove all tasks</button>
+            <button onClick={removeAllTasks} className="button button--removeAllButton">remove all tasks</button>
         </>
     )
 )
