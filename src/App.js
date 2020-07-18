@@ -9,11 +9,7 @@ import Footer from './Footer';
 
 function App() {
 
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "Oglądnąć lekcje o React", done: true },
-    { id: 2, content: "Eksport To Do List do Reacta", done: true },
-    { id: 3, content: "Dodać interakcje", done: false }
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   const [hideDone, setHideDone] = useState(false);
   const toggleHide = () => {
