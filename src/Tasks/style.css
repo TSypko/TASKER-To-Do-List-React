@@ -1,4 +1,4 @@
-.task__button {
+.tasks__button {
     text-transform: uppercase;
     cursor: pointer;
     border: none;
@@ -13,55 +13,55 @@
     background-repeat: no-repeat;
 }
 
-.task__button--doneButton {
+.tasks__button--doneButton {
     background-color: var(--greenButton--color);
     margin-right: 15px;
 }
 
-.task__button--doneButton:hover {
+.tasks__button--doneButton:hover {
     background-color: var(--greenButtonLighter--color);
 }
 
-.task__button--doneButtonToggled {
+.tasks__button--doneButtonToggled {
     background-image: url(checked.svg);
     background-size: 75%;
 }
 
-.task__button--doneButton:active {
+.tasks__button--doneButton:active {
     transform: scale(0.85);
 }
 
-.task__button--deleteButton {
+.tasks__button--deleteButton {
     background-color: var(--redButton--color);
     background-image: url(trash.svg);
     background-size: 85%;
     margin-left: 15px;
 }
 
-.task__button--deleteButton:hover {
+.tasks__button--deleteButton:hover {
     background-color: var(--redButtonLighter--color);
 }
 
-.task__button--deleteButton:active {
+.tasks__button--deleteButton:active {
     transform: scale(0.85);
 }
 
 @media (max-width: 575px) {
-    .task__button--doneButton::before {
+    .tasks__button--doneButton::before {
         padding: 5px 10px;
     }
-    .task__button--deleteButton::before {
+    .tasks__button--deleteButton::before {
         padding: 5px 10px;
     }
 }
 
-.task__list {
+.tasks__list {
     list-style: none;
     padding-left: 0px;
     background-color: var(--section-bg-color);
 }
 
-.task__item {
+.tasks__item {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,16 +69,16 @@
 }
 
 @media (max-width: 175px) {
-    .task__item {
+    .tasks__item {
         flex-wrap: wrap;
     }
 }
 
-.task__item--hidden {
+.tasks__item--hidden {
     display: none;
 }
 
-.task__paragraph {
+.tasks__paragraph {
     font-weight: 400;
     max-width: 100%;
     text-align: justify;
@@ -87,14 +87,17 @@
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
-
-.task__paragraph--done {
+.tasks__paragraph--centered {
+    text-align: center;
+    font-style: italic;
+}
+.tasks__paragraph--done {
     text-decoration: line-through;
     font-style: italic;
 }
 
 @media (max-width: 575px) {
-    .task__paragraph {
+    .tasks__paragraph {
         font-size: 16px;
     }
 }
