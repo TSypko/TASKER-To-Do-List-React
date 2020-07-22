@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/TASKER-To-Do-List-React/static/css/main.50c3c9ed.chunk.css",
-    "main.js": "/TASKER-To-Do-List-React/static/js/main.19c5a964.chunk.js",
-    "main.js.map": "/TASKER-To-Do-List-React/static/js/main.19c5a964.chunk.js.map",
+    "main.js": "/TASKER-To-Do-List-React/static/js/main.59fdb1d7.chunk.js",
+    "main.js.map": "/TASKER-To-Do-List-React/static/js/main.59fdb1d7.chunk.js.map",
     "runtime-main.js": "/TASKER-To-Do-List-React/static/js/runtime-main.5c57046c.js",
     "runtime-main.js.map": "/TASKER-To-Do-List-React/static/js/runtime-main.5c57046c.js.map",
     "static/js/2.7cee9ce1.chunk.js": "/TASKER-To-Do-List-React/static/js/2.7cee9ce1.chunk.js",
     "static/js/2.7cee9ce1.chunk.js.map": "/TASKER-To-Do-List-React/static/js/2.7cee9ce1.chunk.js.map",
     "index.html": "/TASKER-To-Do-List-React/index.html",
-    "precache-manifest.005835a3eb45141fc5171fe01630d412.js": "/TASKER-To-Do-List-React/precache-manifest.005835a3eb45141fc5171fe01630d412.js",
+    "precache-manifest.0d18311e562a3540454df404b3062843.js": "/TASKER-To-Do-List-React/precache-manifest.0d18311e562a3540454df404b3062843.js",
     "service-worker.js": "/TASKER-To-Do-List-React/service-worker.js",
     "static/css/main.50c3c9ed.chunk.css.map": "/TASKER-To-Do-List-React/static/css/main.50c3c9ed.chunk.css.map",
     "static/js/2.7cee9ce1.chunk.js.LICENSE.txt": "/TASKER-To-Do-List-React/static/js/2.7cee9ce1.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.5c57046c.js",
     "static/js/2.7cee9ce1.chunk.js",
     "static/css/main.50c3c9ed.chunk.css",
-    "static/js/main.19c5a964.chunk.js"
+    "static/js/main.59fdb1d7.chunk.js"
   ]
 }
