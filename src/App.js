@@ -12,7 +12,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   const [hideDone, setHideDone] = useState(false);
-  const toggleHide = () => {
+  const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
 
@@ -28,26 +28,24 @@ function App() {
   };
 
   const removeTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id !== id))
-
+    setTasks(tasks => tasks.filter(task => task.id !== id));
   };
 
   const toggleTaskDone = (id) => {
     setTasks(tasks => tasks.map(task => {
       if (task.id === id) {
-        return { ...task, done: !task.done }
-      }
-      return task
+        return { ...task, done: !task.done };
+      };
+      return task;
     }))
   };
 
   const setAllDone = () => {
-    setTasks(tasks => tasks.map(task => ({ ...task, done: true })))
-
+    setTasks(tasks => tasks.map(task => ({ ...task, done: true })));
   };
 
   const removeAllTasks = () => {
-    setTasks(tasks => tasks = [])
+    setTasks([]);
   };
 
 
@@ -58,20 +56,26 @@ function App() {
       <Main>
         <Section
           title="add new task"
-          body={<Form addTask={addTask} />} />
+          body={
+            <Form addTask={addTask} />
+          }
+        />
         <Section
           title="task list"
-          body={<Tasks
-            tasks={tasks}
-            hideDone={hideDone}
-            removeTask={removeTask}
-            toggleTaskDone={toggleTaskDone}
-          />} />
+          body={
+            <Tasks
+              tasks={tasks}
+              hideDone={hideDone}
+              removeTask={removeTask}
+              toggleTaskDone={toggleTaskDone}
+            />
+          }
+        />
       </Main>
       <Footer
         tasks={tasks}
         hideDone={hideDone}
-        toggleHide={toggleHide}
+        toggleHideDone={toggleHideDone}
         setAllDone={setAllDone}
         removeAllTasks={removeAllTasks}
       />
