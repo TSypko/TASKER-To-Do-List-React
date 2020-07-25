@@ -5,13 +5,12 @@
 # TASKER - TO DO LIST MANAGMENT
 **LIVE LINK:** [https://tsypko.github.io/TASKER-To-Do-List-React/](https://tsypko.github.io/TASKER-To-Do-List-React/)
 
-- v. 0.1 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- v. 0.2 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## DESCRIPTION
 To Do List app created during ,*,Become A Front End Developer"* course provided by *Youcode Academy*.
 It helps in scheduling tasks, allowing you to add, check and delete them.
 
- Important! Tasks are currently non-saveable.
 ### TECHNOLOGIES USED:
 
 - React
@@ -54,6 +53,7 @@ Please feel free to contact with author: [tsypko@gmail.com](tsypko@gmail.com)
 
 ### VERSION HISTORY
 
+- v. 0.2 - added saving content to local storage
 - v. 0.1
 
 ## Available Scripts
