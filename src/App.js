@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Switch from './Switch';
 import Header from './Header';
 import Main from './Main';
@@ -9,7 +9,9 @@ import Footer from './Footer';
 
 function App() {
 
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")));
+
+  useEffect(() => localStorage.setItem("tasks", JSON.stringify(tasks)), [tasks]);
 
   const [hideDone, setHideDone] = useState(false);
   const toggleHideDone = () => {
@@ -24,7 +26,8 @@ function App() {
         content: newTaskContent,
         done: false
       }
-    ]);
+    ]
+    );
   };
 
   const removeTask = (id) => {
@@ -47,7 +50,6 @@ function App() {
   const removeAllTasks = () => {
     setTasks([]);
   };
-
 
   return (
     <>
