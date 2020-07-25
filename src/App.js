@@ -9,7 +9,13 @@ import Footer from './Footer';
 
 function App() {
 
-  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")));
+  const loadedTasks = JSON.parse(localStorage.getItem("tasks"));
+
+  const [tasks, setTasks] = useState(
+    loadedTasks
+      ? loadedTasks
+      : []
+  );
 
   useEffect(() => localStorage.setItem("tasks", JSON.stringify(tasks)), [tasks]);
 
