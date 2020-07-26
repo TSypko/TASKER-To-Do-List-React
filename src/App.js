@@ -9,11 +9,11 @@ import Footer from './Footer';
 
 function App() {
 
-  const loadedTasks = JSON.parse(localStorage.getItem("tasks"));
+  const savedTasks = JSON.parse(localStorage.getItem("tasks"));
 
   const [tasks, setTasks] = useState(
-    loadedTasks
-      ? loadedTasks
+    savedTasks
+      ? savedTasks
       : []
   );
 
