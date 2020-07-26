@@ -86,8 +86,7 @@ function App() {
   useEffect(() => localStorage.setItem("button", (buttonState)), [buttonState]);
 
   return (
-    <Wrapper theme={theme}
-    >
+    <Wrapper theme={theme}>
       <FlexContainer>
         <Switch
           value={theme}
