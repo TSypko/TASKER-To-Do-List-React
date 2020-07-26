@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Wrapper from './Wrapper';
-import FlexContainer from './FlexContainer';
+import FlexContainer from './Wrapper/FlexContainer';
 import Switch from './Switch';
 import Header from './Header';
 import Main from './Main';
