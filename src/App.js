@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Wrapper from './Wrapper';
+import FlexContainer from './FlexContainer';
 import Switch from './Switch';
 import Header from './Header';
 import Main from './Main';
@@ -57,37 +59,59 @@ function App() {
     setTasks([]);
   };
 
+  const [theme, setTheme] = useState("light");
+  const [button, setButton] = useState("switch__button")
+
+  const themeChange = () => {
+    if (theme === "light") {
+      setTheme("dark")
+      setButton("switch__button switch__button-toggled");
+
+    } else {
+      setTheme("light")
+      setButton("switch__button");
+    }
+  };
+
   return (
-    <>
-      <Switch />
-      <Header title="TASKER" />
-      <Main>
-        <Section
-          title="add new task"
-          body={
-            <Form addTask={addTask} />
-          }
+    <Wrapper
+      theme={theme}
+    >
+      <FlexContainer>
+        <Switch
+          value={theme}
+          type={button}
+          event={themeChange}
         />
-        <Section
-          title="task list"
-          body={
-            <Tasks
-              tasks={tasks}
-              hideDone={hideDone}
-              removeTask={removeTask}
-              toggleTaskDone={toggleTaskDone}
-            />
-          }
+        <Header title="TASKER" />
+        <Main>
+          <Section
+            title="add new task"
+            body={
+              <Form addTask={addTask} />
+            }
+          />
+          <Section
+            title="task list"
+            body={
+              <Tasks
+                tasks={tasks}
+                hideDone={hideDone}
+                removeTask={removeTask}
+                toggleTaskDone={toggleTaskDone}
+              />
+            }
+          />
+        </Main>
+        <Footer
+          tasks={tasks}
+          hideDone={hideDone}
+          toggleHideDone={toggleHideDone}
+          setAllDone={setAllDone}
+          removeAllTasks={removeAllTasks}
         />
-      </Main>
-      <Footer
-        tasks={tasks}
-        hideDone={hideDone}
-        toggleHideDone={toggleHideDone}
-        setAllDone={setAllDone}
-        removeAllTasks={removeAllTasks}
-      />
-    </>
+      </FlexContainer>
+    </Wrapper>
   );
 }
 
