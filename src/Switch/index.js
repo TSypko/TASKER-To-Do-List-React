@@ -1,31 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style.css";
 
-const Switch = () => {
-  const [theme, setTheme] = useState(false)
-  const onThemeChange = ({ target }) => setTheme(() => {
-    if (target.checked) {
-      document.body.setAttribute("data-theme", "night");
-    } else {
-      document.body.removeAttribute("data-theme");
-    }
-  }
-  );
-  return (
-    <aside className="switch__container">
+const Switch = ({value, type, event}) => (
+
+    <aside className="switch">
       <label htmlFor="switch" className="switch__label">
         Night Mode
     </label>
-      <input
-        className="switch"
-        type="checkbox"
+      <button
+        className={type}
         id="switch"
-        value={theme}
-        onChange={onThemeChange}
+        value={value}
+        onClick={event}
       />
       <label className="switch__toggle" htmlFor="switch"></label>
     </aside>
-  )
-};
+  );
 
 export default Switch;

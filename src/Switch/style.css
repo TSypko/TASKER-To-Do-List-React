@@ -1,4 +1,4 @@
-.switch__container {
+.switch {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -7,11 +7,11 @@
   max-width: 800px;
 }
 
-.switch {
+.switch__button {
   display: none;
 }
 
-.switch:checked+.switch__toggle::after {
+.switch__button-toggled+.switch__toggle::after {
   transform: translatex(0);
 }
 
