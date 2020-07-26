@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 
 const FlexContainer = ({ children }) => (
-    <div lassName=".flexContainer">
+    <div className="flexContainer">
         {children}
     </div>
 
