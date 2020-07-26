@@ -65,7 +65,7 @@ function App() {
       : ""
   );
 
-  const [buttonState, setButton] = useState(
+  const [buttonState, setButtonState] = useState(
     localStorage.getItem("button")
       ? localStorage.getItem("button")
       : "switch__button"
@@ -74,11 +74,11 @@ function App() {
   const themeChange = () => {
     if (!theme) {
       setTheme("dark")
-      setButton("switch__button switch__button-toggled");
+      setButtonState("switch__button switch__button-toggled");
 
     } else {
       setTheme("")
-      setButton("switch__button");
+      setButtonState("switch__button");
     }
   };
 
