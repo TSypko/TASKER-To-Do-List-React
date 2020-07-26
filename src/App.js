@@ -59,28 +59,39 @@ function App() {
     setTasks([]);
   };
 
-  const [theme, setTheme] = useState("light");
-  const [button, setButton] = useState("switch__button")
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme")
+      ? localStorage.getItem("theme")
+      : ""
+  );
+
+  const [buttonState, setButton] = useState(
+    localStorage.getItem("button")
+      ? localStorage.getItem("button")
+      : "switch__button"
+  )
 
   const themeChange = () => {
-    if (theme === "light") {
+    if (!theme) {
       setTheme("dark")
       setButton("switch__button switch__button-toggled");
 
     } else {
-      setTheme("light")
+      setTheme("")
       setButton("switch__button");
     }
   };
 
+  useEffect(() => localStorage.setItem("theme", (theme)), [theme]);
+  useEffect(() => localStorage.setItem("button", (buttonState)), [buttonState]);
+
   return (
-    <Wrapper
-      theme={theme}
+    <Wrapper theme={theme}
     >
       <FlexContainer>
         <Switch
           value={theme}
-          type={button}
+          state={buttonState}
           event={themeChange}
         />
         <Header title="TASKER" />
