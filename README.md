@@ -1,5 +1,5 @@
 
-<p align="center"> <img src="https://tsypko.github.io/TASKER-To-Do-List-React/share-mini.png" />
+<p align="center"> <img src="https://raw.githubusercontent.com/TSypko/TASKER-To-Do-List-React/master/share-mini.png" />
 </p>
 
 # TASKER - TO DO LIST MANAGMENT
@@ -37,14 +37,14 @@ It helps in scheduling tasks, allowing you to add, check and delete them.
 
 7. Optional, you can use **SET ALL TASKS DONE** to check all tasks, use **HIDE DONE** to make done tasks hidden or use **REMOVE ALL** to delete all tasks.
 
-![usage-gif](https://raw.githubusercontent.com/TSypko/Simple-To-Do-List/master/images/toDoList__usage.gif)
+![usage-gif](https://raw.githubusercontent.com/TSypko/TASKER-To-Do-List-React/master/toDoList__usage.gif)
 
 
 ### NIGHT MODE
 
 There is availability to change theme to dark usin switch called **Night Mode**
 
-![switch-usage-gif](https://raw.githubusercontent.com/TSypko/Simple-To-Do-List/master/images/nighMode__usage.gif)
+![switch-usage-gif](https://raw.githubusercontent.com/TSypko/TASKER-To-Do-List-React/master/nightMode__usage.gif)
 
 ### AUTHOR
 [Tomasz Sypko](https://tsypko.github.io/homepage/). Pre Junior Front End Developer from Rzeszów, Poland. 
