@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style.css";
 
-const Buttons = ({ tasks, hideDone, toggleHide: toggleHideDone, setAllDone, removeAllTasks }) => (
+const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone, removeAllTasks }) => (
     tasks.length > 0 && (
         <>
             <button
