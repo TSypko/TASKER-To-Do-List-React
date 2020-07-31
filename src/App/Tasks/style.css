@@ -78,6 +78,12 @@
     display: none;
 }
 
+.tasks__statement {
+    font-weight: 400;
+    font-size: 14px;
+    font-style: italic;
+}
+
 .tasks__paragraph {
     font-weight: 400;
     max-width: 100%;
@@ -87,10 +93,12 @@
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
+
 .tasks__paragraph--centered {
     text-align: center;
     font-style: italic;
 }
+
 .tasks__paragraph--done {
     text-decoration: line-through;
     font-style: italic;

@@ -11,6 +11,9 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
     }
     else return (
         <ul className="tasks__list">
+            <span className="tasks__statement">
+                {hideDone ? "Done tasks are hidden" : ""}
+            </span>
             {tasks.map((task) =>
                 <li key={task.id} className={`tasks__item ${
                     task.done && hideDone ? "tasks__item--hidden" : ""
