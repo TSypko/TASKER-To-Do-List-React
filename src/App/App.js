@@ -14,19 +14,19 @@ function App() {
   const savedTasks = JSON.parse(localStorage.getItem("tasks"));
 
   const [tasks, setTasks] = useState(
-    savedTasks
-      ? savedTasks
-      : []
+    savedTasks || []
   );
 
-  useEffect(() => localStorage.setItem("tasks", JSON.stringify(tasks)), [tasks]);
+  useEffect(() => localStorage.setItem("tasks",
+    JSON.stringify(tasks)), [tasks]);
 
-  const [hideDone, setHideDone] = useState(JSON.parse(localStorage.getItem("hideDone")));
+  const [hideDone, setHideDone] = useState(JSON.parse(localStorage.getItem("hideDone")) || false);
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
 
-  useEffect(() => localStorage.setItem("hideDone", JSON.stringify(hideDone)), [hideDone]);
+  useEffect(() => localStorage.setItem("hideDone",
+    JSON.stringify(hideDone)), [hideDone]);
 
   const addTask = (newTaskContent) => {
     setTasks(tasks => [
@@ -68,8 +68,8 @@ function App() {
   );
 
   const [buttonState, setButtonState] = useState(
-    localStorage.getItem("button")
-      ? localStorage.getItem("button")
+    localStorage.getItem("buttonState")
+      ? localStorage.getItem("buttonState")
       : "switch__button"
   )
 
@@ -85,7 +85,7 @@ function App() {
   };
 
   useEffect(() => localStorage.setItem("theme", (theme)), [theme]);
-  useEffect(() => localStorage.setItem("button", (buttonState)), [buttonState]);
+  useEffect(() => localStorage.setItem("buttonState", (buttonState)), [buttonState]);
 
   return (
     <Wrapper theme={theme}>
