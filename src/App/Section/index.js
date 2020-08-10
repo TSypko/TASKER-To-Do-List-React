@@ -3,7 +3,11 @@ import { SectionContainer, SectionHeader } from "./styled";
 
 const Section = ({ title, body }) => (
     <SectionContainer>
-        <SectionHeader>{title}</SectionHeader>
+        {
+            title
+                ? <SectionHeader>{title}</SectionHeader>
+                : ""
+        }
         {body}
     </SectionContainer>
 )
