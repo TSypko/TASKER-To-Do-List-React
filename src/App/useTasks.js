@@ -1,15 +1,8 @@
-import { useState, useEffect } from "react";
 import { useLocalStorageState } from "./useLocalStorageState";
 
 export const useTasks = () => {
 
-    const [savedTasks, setSavedTasks] = useLocalStorageState("tasks", []);
-
-    const [tasks, setTasks] = useState(
-        savedTasks || []
-    );
-
-    useEffect(() => setSavedTasks(tasks), [tasks]);
+    const [tasks, setTasks] = useLocalStorageState("tasks", []);
 
     const addTask = (newTaskContent) => {
         setTasks(tasks => [
