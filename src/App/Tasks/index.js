@@ -1,37 +1,37 @@
 import React from "react";
-import "./style.css";
+import { Paragraph, List, Item, Statement, Button } from "./styled"
 
 const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
     if (!tasks.length) {
         return (
-            <p className="tasks__paragraph tasks__paragraph--centered">
+            <Paragraph centered>
                 There are currently no tasks to display
-            </p>
+            </Paragraph>
         )
     }
     else return (
-        <ul className="tasks__list">
-            <span className="tasks__statement">
-                {hideDone ? "Done tasks are hidden" : ""}
-            </span>
+        <List className="tasks__list">
+            <Statement
+                content={hideDone}
+            >
+            </Statement>
             {tasks.map((task) =>
-                <li key={task.id} className={`tasks__item ${
-                    task.done && hideDone ? "tasks__item--hidden" : ""
-                    }`}>
-                    <button onClick={() => toggleTaskDone(task.id)}
-                        className={`tasks__button tasks__button--doneButton${
-                            task.done ? " tasks__button--doneButtonToggled" : ""
-                            }`}></button>
-                    <p className={`tasks__paragraph ${
-                        task.done ? "tasks__paragraph--done" : ""
-                        }`}>
+                <Item key={task.id} hidden={task.done && hideDone}>
+                    <Button
+                        onClick={() => toggleTaskDone(task.id)}
+                        done
+                        doneToggled={task.done}>
+                    </Button>
+                    <Paragraph done={task.done}>
                         {task.content}
-                    </p>
-                    <button onClick={() => removeTask(task.id)}
-                        className="tasks__button tasks__button--deleteButton"></button>
-                </li >
+                    </Paragraph>
+                    <Button
+                        onClick={() => removeTask(task.id)}
+                        remove>
+                    </Button>
+                </Item >
             )}
-        </ul >
+        </List >
     )
 };
 
