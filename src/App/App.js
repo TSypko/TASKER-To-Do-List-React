@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useLocalStorageState } from "./useLocalStorageState";
 import { useTasks } from "./useTasks";
 import Wrapper from './Wrapper';
 import FlexContainer from './Wrapper/FlexContainer';
@@ -20,24 +21,13 @@ function App() {
     removeAllTasks
   } = useTasks();
 
-  const [hideDone, setHideDone] = useState(JSON.parse(localStorage.getItem("hideDone")) || false);
+  const [hideDone, setHideDone] = useLocalStorageState("hideDone", false);
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
-  useEffect(() => localStorage.setItem("hideDone",
-    JSON.stringify(hideDone)), [hideDone]);
 
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme")
-      ? localStorage.getItem("theme")
-      : ""
-  );
-
-  const [buttonState, setButtonState] = useState(
-    localStorage.getItem("buttonState")
-      ? localStorage.getItem("buttonState")
-      : "switch__button"
-  )
+  const [theme, setTheme] = useLocalStorageState("theme", "");
+  const [buttonState, setButtonState] = useLocalStorageState("buttonState", "switch__button");
 
   const themeChange = () => {
     if (!theme) {
@@ -49,9 +39,6 @@ function App() {
       setButtonState("switch__button");
     }
   };
-
-  useEffect(() => localStorage.setItem("theme", (theme)), [theme]);
-  useEffect(() => localStorage.setItem("buttonState", (buttonState)), [buttonState]);
 
   return (
     <Wrapper theme={theme}>
