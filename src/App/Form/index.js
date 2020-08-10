@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import "./style.css";
+import { FormContainer, FormInput, FormButton } from "./styled"
 
 const Form = ({ addTask }) => {
 
@@ -22,8 +22,8 @@ const Form = ({ addTask }) => {
     };
 
     return (
-        <form className="form" onSubmit={onFormSubmit}>
-            <input
+        <FormContainer onSubmit={onFormSubmit}>
+            <FormInput
                 ref={inputRef}
                 type="text"
                 className="form__input"
@@ -32,13 +32,13 @@ const Form = ({ addTask }) => {
                 value={newTaskContent}
                 onChange={({ target }) => setNewTaskContent(target.value)}
             />
-            <button
+            <FormButton
                 className="form__button"
                 onClick={focus}
             >
                 submit
-            </button>
-        </form>
+            </FormButton>
+        </FormContainer>
     );
 };
 export default Form;
