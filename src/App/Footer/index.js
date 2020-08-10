@@ -4,10 +4,9 @@ import Section from '../Section';
 import { FooterContainer } from "./styled"
 
 const Footer = ({ tasks, hideDone, toggleHideDone, setAllDone, removeAllTasks }) => (
-    <FooterContainer className="footer">
+    <FooterContainer>
         {tasks.length > 0 && (
             <Section
-                sectionType={"section--footer"}
                 body={<Buttons
                     tasks={tasks}
                     hideDone={hideDone}
