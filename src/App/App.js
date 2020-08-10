@@ -1,4 +1,5 @@
 import React from "react";
+import { ThemeProvider } from "styled-components";
 import { useLocalStorageState } from "./useLocalStorageState";
 import { useTasks } from "./useTasks";
 import Wrapper from './Wrapper';
@@ -32,15 +33,16 @@ function App() {
   const themeChange = () => {
     if (!theme) {
       setTheme("dark")
-      setButtonState("switch__button switch__button-toggled");
+      setButtonState("toggle");
 
     } else {
       setTheme("")
-      setButtonState("switch__button");
+      setButtonState("");
     }
   };
 
   return (
+    <ThemeProvider>
     <Wrapper>
       <FlexContainer>
         <Switch
@@ -77,6 +79,7 @@ function App() {
         />
       </FlexContainer>
     </Wrapper>
+    </ThemeProvider>
   );
 }
 
