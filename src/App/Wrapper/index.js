@@ -1,10 +1,10 @@
 import React from 'react';
-import './style.css';
+import { MainWrapper } from "./styled"
 
-const Wrapper = ({children, theme}) => (
-    <div className={`wrapper wrapper--${theme}`}>
+const Wrapper = ({ children }) => (
+    <MainWrapper>
         {children}
-    </div>
+    </MainWrapper>
 )
 
 export default Wrapper;
