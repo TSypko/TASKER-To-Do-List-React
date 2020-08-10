@@ -1,10 +1,10 @@
 import React from 'react';
 import Buttons from './Buttons';
 import Section from '../Section';
-import "./style.css";
+import { FooterContainer } from "./styled"
 
 const Footer = ({ tasks, hideDone, toggleHideDone, setAllDone, removeAllTasks }) => (
-    <footer className="footer">
+    <FooterContainer className="footer">
         {tasks.length > 0 && (
             <Section
                 sectionType={"section--footer"}
@@ -17,7 +17,7 @@ const Footer = ({ tasks, hideDone, toggleHideDone, setAllDone, removeAllTasks })
                 />}
             />
         )}
-    </footer>
+    </FooterContainer>
 )
 
 export default Footer;
