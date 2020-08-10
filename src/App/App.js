@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useTasks } from "./useTasks";
 import Wrapper from './Wrapper';
 import FlexContainer from './Wrapper/FlexContainer';
 import Switch from './Switch';
@@ -11,55 +12,20 @@ import Footer from './Footer';
 
 function App() {
 
-  const savedTasks = JSON.parse(localStorage.getItem("tasks"));
-
-  const [tasks, setTasks] = useState(
-    savedTasks || []
-  );
-
-  useEffect(() => localStorage.setItem("tasks",
-    JSON.stringify(tasks)), [tasks]);
+  const { tasks,
+    addTask,
+    removeTask,
+    toggleTaskDone,
+    setAllDone,
+    removeAllTasks
+  } = useTasks();
 
   const [hideDone, setHideDone] = useState(JSON.parse(localStorage.getItem("hideDone")) || false);
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
-
   useEffect(() => localStorage.setItem("hideDone",
     JSON.stringify(hideDone)), [hideDone]);
-
-  const addTask = (newTaskContent) => {
-    setTasks(tasks => [
-      ...tasks,
-      {
-        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
-        content: newTaskContent,
-        done: false
-      }
-    ]
-    );
-  };
-
-  const removeTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id !== id));
-  };
-
-  const toggleTaskDone = (id) => {
-    setTasks(tasks => tasks.map(task => {
-      if (task.id === id) {
-        return { ...task, done: !task.done };
-      };
-      return task;
-    }))
-  };
-
-  const setAllDone = () => {
-    setTasks(tasks => tasks.map(task => ({ ...task, done: true })));
-  };
-
-  const removeAllTasks = () => {
-    setTasks([]);
-  };
 
   const [theme, setTheme] = useState(
     localStorage.getItem("theme")
