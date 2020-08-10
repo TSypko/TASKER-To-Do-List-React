@@ -39,9 +39,9 @@ function App() {
       setButtonState("switch__button");
     }
   };
-  
+
   return (
-    <Wrapper theme={theme}>
+    <Wrapper>
       <FlexContainer>
         <Switch
           value={theme}
