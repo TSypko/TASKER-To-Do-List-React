@@ -1,10 +1,10 @@
 import React from 'react';
-import './style.css';
+import { Container } from "./styled"
 
 const FlexContainer = ({ children }) => (
-    <div className="flexContainer">
+    <Container>
         {children}
-    </div>
+    </Container>
 
 );
 
