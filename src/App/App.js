@@ -13,6 +13,10 @@ import Footer from './Footer';
 
 function App() {
 
+  const [hideDone, setHideDone] = useLocalStorageState("hideDone", false);
+  const [theme, setTheme] = useLocalStorageState("theme", "");
+  const [buttonState, setButtonState] = useLocalStorageState("buttonState", "switch__button");
+
   const { tasks,
     addTask,
     removeTask,
@@ -21,13 +25,9 @@ function App() {
     removeAllTasks
   } = useTasks();
 
-  const [hideDone, setHideDone] = useLocalStorageState("hideDone", false);
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
-
-  const [theme, setTheme] = useLocalStorageState("theme", "");
-  const [buttonState, setButtonState] = useLocalStorageState("buttonState", "switch__button");
 
   const themeChange = () => {
     if (!theme) {
@@ -39,7 +39,7 @@ function App() {
       setButtonState("switch__button");
     }
   };
-
+  
   return (
     <Wrapper theme={theme}>
       <FlexContainer>
