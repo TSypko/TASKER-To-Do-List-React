@@ -1,9 +1,9 @@
 import React from 'react';
+import { Image } from "./styled"
 import logo from '../logo.svg';
-import "./style.css";
 
 const Logo = () => (
-    <img
+    <Image
         src={logo}
         alt="Logotype"
         className="logo"
