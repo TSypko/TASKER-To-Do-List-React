@@ -40,14 +40,14 @@ export const Paragraph = styled.p`
 export const List = styled.ul`
         list-style: none;
         padding-left: 0px;
-        background-color: var(--section-bg-color);    
+        background-color: ${({ theme }) => theme.section_bg};    
     `;
 
 export const Item = styled.li`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid var(--section-text-color);   
+        border-bottom: 1px solid ${({ theme }) => theme.section_text};   
 
         @media (max-width: 175px) {
             flex-wrap: wrap;
@@ -76,11 +76,11 @@ export const Button = styled.button`
         }
         
         ${({ done }) => done && css`
-            background-color: var(--greenButton--color);
+            background-color: ${({ theme }) => theme.greenButton};
             margin-right: 15px;
 
             &:hover {
-                background-color: var(--greenButtonLighter--color);
+                background-color: ${({ theme }) => theme.greenButton_lighter};
             }
             &:active {
                 transform: scale(0.85);
@@ -93,13 +93,13 @@ export const Button = styled.button`
         `}
         
         ${({ remove }) => remove && css`
-            background-color: var(--redButton--color);
+            background-color: ${({ theme }) => theme.redButton};
             background-image: url(${trash});
             background-size: 85%;
             margin-left: 15px;
 
             &:hover {
-                background-color: var(--redButtonLighter--color);
+                background-color: ${({ theme }) => theme.redButton_lighter};
             }
             &:active {
                 transform: scale(0.85);

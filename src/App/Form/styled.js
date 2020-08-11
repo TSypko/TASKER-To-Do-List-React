@@ -18,8 +18,8 @@ export const FormButton = styled.button`
         cursor: pointer;
         border: none;
         min-width: max-content;
-        background-color: var(--section-text-color);
-        color: var(--section-bg-color);
+        background-color: ${({ theme }) => theme.section_text};
+        color: ${({ theme }) => theme.section_bg};
         letter-spacing: 1px;
         padding: 10px 10px;
         margin-left: 10px;
@@ -31,14 +31,14 @@ export const FormButton = styled.button`
         }
 
         &:hover {
-            background-color: var(--section-bg-color);
-            color: var(--section-text-color);
-            border: 1px solid var(--section-text-color);
+            background-color: ${({ theme }) => theme.section_bg};
+            color: ${({ theme }) => theme.section_text};
+            border: 1px solid ${({ theme }) => theme.section_text};
             font-weight: bold;
             padding-left: 7px;
         }
         &:active {
-            border: 1px solid var(--section-text-color);
+            border: 1px solid ${({ theme }) => theme.section_text};
             transform: scale(0.9);
         }
     `;

@@ -11,7 +11,7 @@ export const SwitchContainer = styled.aside`
 
 export const Label = styled.label`
         font-weight: 700;
-        color: var(--section-text-color);
+        color: ${({ theme }) => theme.section_text};
         margin-right: 10px;
 
         ${({ toggle }) => toggle && css`
@@ -19,19 +19,19 @@ export const Label = styled.label`
             display: block;
             padding: 5px 10px;
             width: 65px;
-            background-color: var(--switch--color);
-            background-image: var(--switch--color);
+            background-color: ${({ theme }) => theme.switch};
+            background-image: ${({ theme }) => theme.switch};
             transition: all 0.5s;
             cursor: pointer;
-            box-shadow: 1px 1px 2px 1px var(--section-shadow-color);
+            box-shadow: 1px 1px 2px 1px ${({ theme }) => theme.shadow};
 
             &::after {
                 content: "";
                 display: block;
                 height: 20px;
                 width: 20px;
-                background-color: var(--background);
-                border: 1px solid var(--section-text-color);
+                background-color: ${({ theme }) => theme.background};
+                border: 1px solid ${({ theme }) => theme.section_text};
                 transition: all 0.3s;
                 transform: translatex(130%);
             }

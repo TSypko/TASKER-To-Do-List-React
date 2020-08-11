@@ -24,12 +24,12 @@ export const Button = styled.button`
         transition: background-color 0.4s;
 
         ${({ doneAll }) => doneAll && css`
-            background-color: var(--greenButton--color);
+            background-color: ${({ theme }) => theme.greenButton};
             border-radius: 5px;
             transition: 0.5s;
 
             &:hover {
-                background-color: var(--greenButtonLighter--color);
+                background-color: ${({ theme }) => theme.greenButton_lighter};
             }
             
             &:active {
@@ -43,12 +43,12 @@ export const Button = styled.button`
         `}
 
         ${({ hideDone }) => hideDone && css`
-                background-color: var(--greenButton--color);
+                background-color: ${({ theme }) => theme.greenButton};
                 border-radius: 5px;
                 transition: 0.3s;
 
             &:hover {
-                background-color: var(--greenButtonLighter--color);
+                background-color: ${({ theme }) => theme.greenButton_lighter};
             }
 
             &:active {
@@ -63,12 +63,12 @@ export const Button = styled.button`
         `}
 
         ${({ removeAll }) => removeAll && css`
-                background-color: var(--redButton--color);
+                background-color: ${({ theme }) => theme.redButton};
                 border-radius: 5px;
                 transition: 0.3s;
 
             &:hover {
-                background-color: var(--redButtonLighter--color);
+                background-color: ${({ theme }) => theme.redButton_lighter};
             }
             
             &:active {
