@@ -10,7 +10,6 @@ export const useTasks = () => {
             {
                 id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
                 content: newTaskContent,
-                done: false
             }
         ]
         );
