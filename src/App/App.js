@@ -18,8 +18,7 @@ function App() {
 
   const [hideDone, setHideDone] = useLocalStorageState("hideDone", false);
   const [theme, setTheme] = useLocalStorageState("theme", "light");
-  const [buttonState, setButtonState] = useLocalStorageState("buttonState", "");
-
+  
   const { tasks,
     addTask,
     removeTask,
@@ -35,29 +34,26 @@ function App() {
   const themeChange = () => {
     if (theme === "light") {
       setTheme("dark")
-      setButtonState("toggled")
     }
     else { 
       setTheme("light")
-      setButtonState("")
    };
   };
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-      <GlobalStyles />
+      <GlobalStyles/>
       <Wrapper>
         <FlexContainer>
           <Switch
             event={themeChange}
-            state={buttonState}
           />
-          <Header title="TASKER" />
+          <Header title="TASKER"/>
           <Main>
             <Section
               title="add new task"
               body={
-                <Form addTask={addTask} />
+                <Form addTask={addTask}/>
               }
             />
             <Section

@@ -1,14 +1,13 @@
 import React from "react";
 import { SwitchContainer, Label, Button } from "./styled"
 
-const Switch = ({ event, state }) => (
+const Switch = ({ event }) => (
 
   <SwitchContainer>
     <Label htmlFor="switch">
       Night Mode
     </Label>
     <Button
-      toggled={state}
       id="switch"
       onClick={event}
     />
