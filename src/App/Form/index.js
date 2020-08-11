@@ -19,6 +19,7 @@ const Form = ({ addTask }) => {
         event.preventDefault();
         addTask(newTaskContentTrimmed);
         setNewTaskContent("");
+        focus();
     };
 
     return (
@@ -26,16 +27,12 @@ const Form = ({ addTask }) => {
             <FormInput
                 ref={inputRef}
                 type="text"
-                className="form__input"
                 autoFocus
                 placeholder="write your task here"
                 value={newTaskContent}
                 onChange={({ target }) => setNewTaskContent(target.value)}
             />
-            <FormButton
-                className="form__button"
-                onClick={focus}
-            >
+            <FormButton>
                 submit
             </FormButton>
         </FormContainer>
