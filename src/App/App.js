@@ -1,5 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
+import { themeLight, themeDark } from "./themes";
+import { GlobalStyles } from "./Globalstyle";
 import { useLocalStorageState } from "./useLocalStorageState";
 import { useTasks } from "./useTasks";
 import Wrapper from './Wrapper';
@@ -15,8 +17,8 @@ import Footer from './Footer';
 function App() {
 
   const [hideDone, setHideDone] = useLocalStorageState("hideDone", false);
-  const [theme, setTheme] = useLocalStorageState("theme", "");
-  const [buttonState, setButtonState] = useLocalStorageState("buttonState", "switch__button");
+  const [theme, setTheme] = useLocalStorageState("theme", "light");
+  // const [buttonState, setButtonState] = useLocalStorageState("buttonState", "switch__button");
 
   const { tasks,
     addTask,
@@ -31,54 +33,46 @@ function App() {
   };
 
   const themeChange = () => {
-    if (!theme) {
-      setTheme("dark")
-      setButtonState("toggle");
-
-    } else {
-      setTheme("")
-      setButtonState("");
-    }
+   theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
   return (
-    <ThemeProvider>
-    <Wrapper>
-      <FlexContainer>
-        <Switch
-          value={theme}
-          state={buttonState}
-          event={themeChange}
-        />
-        <Header title="TASKER" />
-        <Main>
-          <Section
-            title="add new task"
-            body={
-              <Form addTask={addTask} />
-            }
+    <ThemeProvider theme={theme === "light" ? themeLight : themeDark}>
+      <GlobalStyles />
+      <Wrapper>
+        <FlexContainer>
+          <Switch
+            event={themeChange}
           />
-          <Section
-            title="task list"
-            body={
-              <Tasks
-                tasks={tasks}
-                hideDone={hideDone}
-                removeTask={removeTask}
-                toggleTaskDone={toggleTaskDone}
-              />
-            }
+          <Header title="TASKER" />
+          <Main>
+            <Section
+              title="add new task"
+              body={
+                <Form addTask={addTask} />
+              }
+            />
+            <Section
+              title="task list"
+              body={
+                <Tasks
+                  tasks={tasks}
+                  hideDone={hideDone}
+                  removeTask={removeTask}
+                  toggleTaskDone={toggleTaskDone}
+                />
+              }
+            />
+          </Main>
+          <Footer
+            tasks={tasks}
+            hideDone={hideDone}
+            toggleHideDone={toggleHideDone}
+            setAllDone={setAllDone}
+            removeAllTasks={removeAllTasks}
           />
-        </Main>
-        <Footer
-          tasks={tasks}
-          hideDone={hideDone}
-          toggleHideDone={toggleHideDone}
-          setAllDone={setAllDone}
-          removeAllTasks={removeAllTasks}
-        />
-      </FlexContainer>
-    </Wrapper>
+        </FlexContainer>
+      </Wrapper>
     </ThemeProvider>
   );
 }
