@@ -12,7 +12,7 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
     else return (
         <List className="tasks__list">
             <Statement
-                content={hideDone}
+                content={hideDone ? hideDone : ""}
             >
             </Statement>
             {tasks.map((task) =>
