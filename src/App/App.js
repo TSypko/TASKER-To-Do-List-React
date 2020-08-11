@@ -18,7 +18,7 @@ function App() {
 
   const [hideDone, setHideDone] = useLocalStorageState("hideDone", false);
   const [theme, setTheme] = useLocalStorageState("theme", "light");
-  // const [buttonState, setButtonState] = useLocalStorageState("buttonState", "switch__button");
+  const [buttonState, setButtonState] = useLocalStorageState("buttonState", "");
 
   const { tasks,
     addTask,
@@ -33,7 +33,14 @@ function App() {
   };
 
   const themeChange = () => {
-   theme === "light" ? setTheme("dark") : setTheme("light");
+    if (theme === "light") {
+      setTheme("dark")
+      setButtonState("toggled")
+    }
+    else { 
+      setTheme("light")
+      setButtonState("")
+   };
   };
 
   return (
@@ -43,6 +50,7 @@ function App() {
         <FlexContainer>
           <Switch
             event={themeChange}
+            state={buttonState}
           />
           <Header title="TASKER" />
           <Main>

@@ -1,19 +1,20 @@
 import React from "react";
 import { SwitchContainer, Label, Button } from "./styled"
 
-const Switch = ({value, event}) => (
+const Switch = ({ event, state }) => (
 
-    <SwitchContainer>
-      <Label htmlFor="switch">
-        Night Mode
+  <SwitchContainer>
+    <Label htmlFor="switch">
+      Night Mode
     </Label>
-      <Button
-        id="switch"
-        value={value}
-        onClick={event}
-      />
-      <Label toggle htmlFor="switch"></Label>
-    </SwitchContainer>
-  );
+    <Button
+      toggled={state}
+      id="switch"
+      onClick={event}
+    />
+    <Label toggle htmlFor="switch"></Label>
+  </SwitchContainer>
+  
+);
 
 export default Switch;
