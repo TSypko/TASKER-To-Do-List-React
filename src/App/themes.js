@@ -1,5 +1,4 @@
-
-  export const themeLight = {
+export const lightTheme = {
     background: "#c4bb91",
     section_bg: "#fff",
     section_text: "#141414",
@@ -10,9 +9,9 @@
     redButton_lighter: "hsl(0, 100%, 45%)",
     switch: "hsl(0, 0%, 100%)",
     svg_image: "brightness(100%) invert(0%)",
-  };
+};
 
-  export const themeDark = {
+export const darkTheme = {
     background: "#1a1a1a",
     section_bg: "#2a3a41",
     section_text: "rgb(255, 255, 255)",
@@ -23,4 +22,4 @@
     redButton_lighter: "hsl(0, 100%, 45%)",
     switch: "#2a3a41",
     svg_image: "brightness(0%) invert(100%)",
-  };
+};
