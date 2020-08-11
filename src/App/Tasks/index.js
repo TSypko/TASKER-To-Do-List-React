@@ -10,25 +10,25 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
         )
     }
     else return (
-        <List className="tasks__list">
+        <List>
             <Statement
-                content={hideDone ? hideDone : ""}
+                content={hideDone || ""}
             >
             </Statement>
             {tasks.map((task) =>
                 <Item key={task.id} hidden={task.done && hideDone}>
                     <Button
                         onClick={() => toggleTaskDone(task.id)}
-                        done
-                        doneToggled={task.done}>
-                    </Button>
+                        active
+                        done={task.done}
+                    />
                     <Paragraph done={task.done}>
                         {task.content}
                     </Paragraph>
                     <Button
                         onClick={() => removeTask(task.id)}
-                        remove>
-                    </Button>
+                        remove
+                    />
                 </Item >
             )}
         </List >
