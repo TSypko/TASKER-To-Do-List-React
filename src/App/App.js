@@ -17,7 +17,7 @@ import Footer from './Footer';
 function App() {
 
   const [hideDone, setHideDone] = useLocalStorageState("hideDone", false);
-  const [theme, setTheme] = useLocalStorageState("theme", "light");
+  const [theme, setTheme] = useLocalStorageState("currentTheme", "light");
   
   const { tasks,
     addTask,
