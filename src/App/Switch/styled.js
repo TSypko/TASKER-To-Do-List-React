@@ -33,7 +33,7 @@ export const Label = styled.label`
             background-color: ${({ theme }) => theme.background};
             border: 1px solid ${({ theme }) => theme.section_text};
             transition: all 0.3s;
-            transform: translatex(130%);
+            transform: ${({ theme }) => theme.translate};;
         }
 
         &:hover {
@@ -48,7 +48,7 @@ export const Button = styled.button`
 
     ${({ toggled }) => toggled && css`   
         +Label::after {
-            transform: translatex(0);
+            transform: ${({ theme }) => theme.translate};;
         }
     `}
 `;

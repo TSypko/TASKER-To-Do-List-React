@@ -9,6 +9,7 @@ export const lightTheme = {
     redButton_lighter: "hsl(0, 100%, 45%)",
     switch: "hsl(0, 0%, 100%)",
     svg_image: "brightness(100%) invert(0%)",
+    translate: "translatex(130%)",
 };
 
 export const darkTheme = {
@@ -22,4 +23,5 @@ export const darkTheme = {
     redButton_lighter: "hsl(0, 100%, 45%)",
     switch: "#2a3a41",
     svg_image: "brightness(0%) invert(100%)",
+    translate: "translatex(0%)",
 };
