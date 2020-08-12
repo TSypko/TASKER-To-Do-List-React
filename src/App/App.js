@@ -46,7 +46,7 @@ function App() {
       <Wrapper>
         <FlexContainer>
           <Switch
-            event={themeChange}
+            onChange={themeChange}
           />
           <Header title="TASKER"/>
           <Main>

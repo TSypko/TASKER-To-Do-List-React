@@ -1,7 +1,7 @@
 import React from "react";
 import { SwitchContainer, Label, Button } from "./styled"
 
-const Switch = ({ event }) => (
+const Switch = ({ onChange }) => (
 
   <SwitchContainer>
     <Label htmlFor="switch">
@@ -9,7 +9,7 @@ const Switch = ({ event }) => (
     </Label>
     <Button
       id="switch"
-      onClick={event}
+      onClick={onChange}
     />
     <Label toggle htmlFor="switch"></Label>
   </SwitchContainer>
