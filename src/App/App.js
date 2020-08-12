@@ -5,7 +5,7 @@ import { GlobalStyles } from "./Globalstyle";
 import { useLocalStorageState } from "./useLocalStorageState";
 import { useTasks } from "./useTasks";
 import Wrapper from './Wrapper';
-import FlexContainer from './Wrapper/FlexContainer';
+import FlexContainer from './FlexContainer';
 import Switch from './Switch';
 import Header from './Header';
 import Main from './Main';
