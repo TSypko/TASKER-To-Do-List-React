@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
-export const HeaderContainer  = styled.header`
+export const HeaderContainer = styled.header`
     margin: 10px auto;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 `;
 
-
-export const HeaderSection  = styled.section`
+export const HeaderSection = styled.section`
     display: flex;
     justify-content: center;
     background-color: ${({ theme }) => theme.sectionBackground};
@@ -18,7 +17,7 @@ export const HeaderSection  = styled.section`
     box-shadow: 1px 1px 2px 1px ${({ theme }) => theme.shadow};
 `;
 
-export const HeaderTitle  = styled.h1`
+export const HeaderTitle = styled.h1`
     text-transform: capitalize;
     color: ${({ theme }) => theme.sectionText};
     font-size: 40px;
@@ -28,4 +27,3 @@ export const HeaderTitle  = styled.h1`
         font-size: 30px;
     }
 `;
-
