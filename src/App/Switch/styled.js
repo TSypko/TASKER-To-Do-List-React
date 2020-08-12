@@ -12,7 +12,7 @@ export const SwitchContainer = styled.aside`
 export const Label = styled.label`
     font-weight: 700;
     color: ${({ theme }) => theme.sectionText};
-    margin-right: 10px;
+    margin-left: 10px;
 
     ${({ toggle }) => toggle && css`
         position: relative;
