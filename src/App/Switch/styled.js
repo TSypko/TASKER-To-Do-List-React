@@ -11,7 +11,7 @@ export const SwitchContainer = styled.aside`
 
 export const Label = styled.label`
     font-weight: 700;
-    color: ${({ theme }) => theme.section_text};
+    color: ${({ theme }) => theme.sectionText};
     margin-right: 10px;
 
     ${({ toggle }) => toggle && css`
@@ -31,7 +31,7 @@ export const Label = styled.label`
             height: 20px;
             width: 20px;
             background-color: ${({ theme }) => theme.background};
-            border: 1px solid ${({ theme }) => theme.section_text};
+            border: 1px solid ${({ theme }) => theme.sectionText};
             transition: all 0.3s;
             transform: ${({ theme }) => theme.translate};;
         }

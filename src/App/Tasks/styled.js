@@ -40,14 +40,14 @@ export const Paragraph = styled.p`
 export const List = styled.ul`
     list-style: none;
     padding-left: 0px;
-    background-color: ${({ theme }) => theme.section_bg};    
+    background-color: ${({ theme }) => theme.sectionBackground};    
 `;
 
 export const Item = styled.li`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid ${({ theme }) => theme.section_text};   
+    border-bottom: 1px solid ${({ theme }) => theme.sectionText};   
 
     @media (max-width: 175px) {
         flex-wrap: wrap;
@@ -80,7 +80,7 @@ export const Button = styled.button`
         margin-right: 15px;
 
         &:hover {
-            background-color: ${({ theme }) => theme.greenButton_lighter};
+            background-color: ${({ theme }) => theme.greenButtonLighter};
         }
         &:active {
             transform: scale(0.85);
@@ -99,7 +99,7 @@ export const Button = styled.button`
         margin-left: 15px;
 
         &:hover {
-            background-color: ${({ theme }) => theme.redButton_lighter};
+            background-color: ${({ theme }) => theme.redButtonLighter};
         }
         &:active {
             transform: scale(0.85);

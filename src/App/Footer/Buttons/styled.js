@@ -29,7 +29,7 @@ export const Button = styled.button`
         transition: 0.5s;
 
         &:hover {
-            background-color: ${({ theme }) => theme.greenButton_lighter};
+            background-color: ${({ theme }) => theme.greenButtonLighter};
         }
         
         &:active {
@@ -48,7 +48,7 @@ export const Button = styled.button`
             transition: 0.3s;
 
         &:hover {
-            background-color: ${({ theme }) => theme.greenButton_lighter};
+            background-color: ${({ theme }) => theme.greenButtonLighter};
         }
 
         &:active {
@@ -68,7 +68,7 @@ export const Button = styled.button`
             transition: 0.3s;
 
         &:hover {
-            background-color: ${({ theme }) => theme.redButton_lighter};
+            background-color: ${({ theme }) => theme.redButtonLighter};
         }
         
         &:active {

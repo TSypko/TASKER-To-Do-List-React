@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const SectionContainer = styled.section`
-    background-color: ${({ theme }) => theme.section_bg};
-    color: ${({ theme }) => theme.section_text};
+    background-color: ${({ theme }) => theme.sectionBackground};
+    color: ${({ theme }) => theme.sectionText};
     width: 100%;
     padding: 20px;
     margin: 10px 0px;
@@ -13,5 +13,5 @@ export const SectionHeader = styled.h2`
     font-size: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid;
-    border-color: ${({ theme }) => theme.section_text};
+    border-color: ${({ theme }) => theme.sectionText};
 `;
