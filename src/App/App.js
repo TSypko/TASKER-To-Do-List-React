@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./themes";
+import { themes } from "./themes";
 import { GlobalStyles } from "./Globalstyle";
 import { useLocalStorageState } from "./useLocalStorageState";
 import { useTasks } from "./useTasks";
@@ -41,7 +41,7 @@ function App() {
   };
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme === "light" ? themes.light : themes.dark}>
       <GlobalStyles/>
       <Wrapper>
         <FlexContainer>
