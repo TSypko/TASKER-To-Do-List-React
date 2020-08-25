@@ -23,6 +23,7 @@ export const Paragraph = styled.p`
     font-size: 20px;
     overflow-wrap: break-word;
     word-wrap: break-word;
+    margin: 5px 0px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
         font-size: 16px;
@@ -38,6 +39,30 @@ export const Paragraph = styled.p`
     `}
 `;
 
+export const DateParagraph = styled.p`
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    max-width: 100%;
+    flex-grow: 1;
+    font-size: 13px;
+    margin: 5px 0px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.sectionText};   
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
+        font-size: 12px;
+    }
+`;
+
+export const Date = styled.span`
+    ${({ edited }) => edited && css`
+        text-align: right;
+        font-style: italic;
+    `}
+    
+`;
+
 export const List = styled.ul`
     list-style: none;
     padding-left: 0px;
@@ -48,7 +73,6 @@ export const Item = styled.li`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.sectionText};   
   
     ${({ hidden }) => hidden && css`
         display: none;
@@ -76,7 +100,7 @@ export const Button = styled.button`
     ${({ active }) => active && css`
         background-color: ${({ theme }) => theme.colors.greenButton};
         margin-right: 15px;
-        transition: 0.5s;
+        transition: 0.2s;
 
         &:hover {
             filter: brightness(110%);
@@ -97,6 +121,7 @@ export const Button = styled.button`
         background-image: url(${pen});
         background-size: 75%;
         margin-left: 15px;
+        transition: 0.2s;
 
         &:hover {
             filter: brightness(110%);
@@ -112,7 +137,7 @@ export const Button = styled.button`
         background-image: url(${trash});
         background-size: 85%;
         margin-left: 15px;
-        transition: 0.5s;
+        transition: 0.2s;
 
         &:hover {
             filter: brightness(110%);

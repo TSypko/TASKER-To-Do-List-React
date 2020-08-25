@@ -5,7 +5,7 @@
 # TASKER - TO DO LIST MANAGMENT
 **LIVE LINK:** [https://tsypko.github.io/TASKER-To-Do-List-React/](https://tsypko.github.io/TASKER-To-Do-List-React/)
 
-- v. 1.2.0 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- v. 1.2.1 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## DESCRIPTION
 To Do List app created during ,*,Become A Front End Developer"* course provided by *Youcode Academy*.
@@ -59,6 +59,7 @@ Please feel free to contact with author: [tsypko@gmail.com](tsypko@gmail.com)
 
 ### VERSION HISTORY
 
+- v. 1.2.1 - added task creation and last edition time & date
 - v. 1.2.0 - added EDIT functionality
 - v. 1.1.3 - minor script upgrades
 - v. 1.1.2 - code updated with custom hooks
