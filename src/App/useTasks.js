@@ -3,15 +3,24 @@ import { useCurrentDate } from "./useCurrentDate";
 
 export const useTasks = () => {
 
-    const formatDate = (rawDate) => {
+    const createDate = (rawDate) => {
         const dateString = rawDate.toLocaleDateString(
             "en-EN", {
-            weekday: "long",
             day: "numeric",
             month: "long"
         });
         const timeString = rawDate.toLocaleTimeString();
         return `Created at ${timeString} on ${dateString}`
+    };
+
+    const editDate = (rawDate) => {
+        const dateString = rawDate.toLocaleDateString(
+            "en-EN", {
+            day: "numeric",
+            month: "long"
+        });
+        const timeString = rawDate.toLocaleTimeString();
+        return `(edited at ${timeString} on ${dateString})`
     };
 
     const [tasks, setTasks] = useLocalStorageState("tasks", []);
@@ -23,7 +32,8 @@ export const useTasks = () => {
             {
                 id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
                 content: newTaskContent,
-                date: formatDate(rawDate),
+                date: createDate(rawDate),
+                editDate: null,
             }
         ]
         );
@@ -31,10 +41,18 @@ export const useTasks = () => {
 
     const editTask = (editTaskContent, id) => {
         setTasks(tasks => tasks.map(task => {
-            if (task.id === id) {
-                return { ...task, content: editTaskContent, edit: false };
+            if (task.id === id && task.content !== editTaskContent) {
+                return {
+                    ...task,
+                    content: editTaskContent,
+                    edit: false,
+                    editDate: editDate(rawDate)
+                };
             };
-            return task;
+            return {
+                ...task,
+                edit: false
+            }
         }))
     };
 
