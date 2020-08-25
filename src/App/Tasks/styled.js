@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import checked from "./checked.svg";
 import trash from "./trash.svg";
+import pen from "./pen.svg";
 
 export const Statement = styled.span`
     font-weight: 400;
@@ -90,6 +91,20 @@ export const Button = styled.button`
         background-image: url(${checked});
         background-size: 75%;
     `}
+
+    ${({ edit }) => edit && css`
+        background-color: ${({ theme }) => theme.colors.yellowButton};
+        background-image: url(${pen});
+        background-size: 75%;
+
+        &:hover {
+            filter: brightness(110%);
+        }
+        &:active {
+            transform: scale(0.85);
+            filter: brightness(120%);
+        }
+    `}
     
     ${({ remove }) => remove && css`
         background-color: ${({ theme }) => theme.colors.redButton};
@@ -107,8 +122,4 @@ export const Button = styled.button`
         }
     `}
 
-    ${({ removeToggled }) => removeToggled && css`
-        background-image: ${checked};
-        background-size: 75%;
-    `}
 `;

@@ -26,6 +26,9 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
                         {task.content}
                     </Paragraph>
                     <Button
+                        edit
+                    />
+                    <Button
                         onClick={() => removeTask(task.id)}
                         remove
                     />
