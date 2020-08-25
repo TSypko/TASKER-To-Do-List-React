@@ -45,7 +45,7 @@ export const DateParagraph = styled.p`
     font-weight: 400;
     max-width: 100%;
     flex-grow: 1;
-    font-size: 14px;
+    font-size: 13px;
     margin: 5px 0px;
     padding-bottom: 5px;
     border-bottom: 1px solid ${({ theme }) => theme.colors.sectionText};   
