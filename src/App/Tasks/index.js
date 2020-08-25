@@ -26,7 +26,6 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone, toggleEditTask, ed
                     <Paragraph done={task.done}>
                         {task.edit
                             ? <EditForm
-                                edit={task.edit}
                                 value={task.content}
                                 editTask={editTask}
                                 taskID={task.id}

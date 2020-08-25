@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { EditFormInput, Button, FormContainer } from "./styled"
 
-const EditForm = ({ edit, value, editTask, taskID }) => {
+const EditForm = ({ value, editTask, taskID }) => {
 
     const [editTaskContent, setEditTaskContent] = useState(value);
 
@@ -20,7 +20,7 @@ const EditForm = ({ edit, value, editTask, taskID }) => {
 
             <FormContainer>
                 <EditFormInput
-                    edit={edit}
+                    edit
                     value={editTaskContent}
                     type="text"
                     autoFocus
