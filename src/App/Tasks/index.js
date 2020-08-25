@@ -25,8 +25,8 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone, toggleEditTask, ed
             >
             </Statement>
             {tasks.map((task) =>
-                <>
-                    <Item key={task.id} hidden={task.done && hideDone}>
+                <React.Fragment key={task.id}>
+                    <Item hidden={task.done && hideDone}>
                         <Button
                             onClick={() => toggleTaskDone(task.id)}
                             active
@@ -51,11 +51,11 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone, toggleEditTask, ed
                             remove
                         />
                     </Item >
-                    <DateParagraph key={task.date}>
+                    <DateParagraph >
                         <Date>{task.date}</Date>
                         <Date edited>{task.editDate}</Date>
                     </DateParagraph>
-                </>
+                </React.Fragment>
             )}
         </List >
     )
