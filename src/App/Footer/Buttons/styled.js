@@ -4,10 +4,6 @@ export const ButtonContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-
-    @media (max-width: 399px) {
-        justify-content: center;
-    }
 `;
     
 export const Button = styled.button`
@@ -24,51 +20,52 @@ export const Button = styled.button`
     transition: background-color 0.4s;
 
     ${({ doneAll }) => doneAll && css`
-        background-color: ${({ theme }) => theme.greenButton};
+        background-color: ${({ theme }) => theme.colors.greenButton};
         border-radius: 5px;
         transition: 0.5s;
 
         &:hover {
-            background-color: ${({ theme }) => theme.greenButtonLighter};
+            filter: brightness(110%);
         }
         
         &:active {
             transform: scale(0.9);
+            filter: brightness(120%);
         }
         &:disabled {
             background-color: #ccc;
-            border-radius: 5px;
+            filter: brightness(100%);
             cursor: default;
         }
     `}
 
     ${({ hideDone }) => hideDone && css`
-            background-color: ${({ theme }) => theme.greenButton};
+            background-color: ${({ theme }) => theme.colors.greenButton};
             border-radius: 5px;
             transition: 0.3s;
 
         &:hover {
-            background-color: ${({ theme }) => theme.greenButtonLighter};
+            filter: brightness(110%);
         }
-
+        
         &:active {
             transform: scale(0.9);
+            filter: brightness(120%);
         }
-
         &:disabled {
             background-color: #ccc;
-            border-radius: 5px;
+            filter: brightness(100%);
             cursor: default;
         }
     `}
 
     ${({ removeAll }) => removeAll && css`
-            background-color: ${({ theme }) => theme.redButton};
+            background-color: ${({ theme }) => theme.colors.redButton};
             border-radius: 5px;
             transition: 0.3s;
 
         &:hover {
-            background-color: ${({ theme }) => theme.redButtonLighter};
+            background-color: ${({ theme }) => theme.colors.redButtonLighter};
         }
         
         &:active {

@@ -23,7 +23,7 @@ export const Paragraph = styled.p`
     overflow-wrap: break-word;
     word-wrap: break-word;
 
-    @media (max-width: 575px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
         font-size: 16px;
     }
 
@@ -40,18 +40,15 @@ export const Paragraph = styled.p`
 export const List = styled.ul`
     list-style: none;
     padding-left: 0px;
-    background-color: ${({ theme }) => theme.sectionBackground};    
+    background-color: ${({ theme }) => theme.colors.sectionBackground};    
 `;
 
 export const Item = styled.li`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid ${({ theme }) => theme.sectionText};   
-
-    @media (max-width: 175px) {
-        flex-wrap: wrap;
-    }
+    border-bottom: 1px solid ${({ theme }) => theme.colors.sectionText};   
+  
     ${({ hidden }) => hidden && css`
         display: none;
     `}
@@ -70,20 +67,22 @@ export const Button = styled.button`
     transition: background-color 0.4s;
     background-repeat: no-repeat;
 
-    @media (max-width: 359px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
         min-width: 25px;
         min-height: 25px;
     }
     
     ${({ active }) => active && css`
-        background-color: ${({ theme }) => theme.greenButton};
+        background-color: ${({ theme }) => theme.colors.greenButton};
         margin-right: 15px;
+        transition: 0.5s;
 
         &:hover {
-            background-color: ${({ theme }) => theme.greenButtonLighter};
+            filter: brightness(110%);
         }
         &:active {
             transform: scale(0.85);
+            filter: brightness(120%);
         }
     `}
 
@@ -93,16 +92,18 @@ export const Button = styled.button`
     `}
     
     ${({ remove }) => remove && css`
-        background-color: ${({ theme }) => theme.redButton};
+        background-color: ${({ theme }) => theme.colors.redButton};
         background-image: url(${trash});
         background-size: 85%;
         margin-left: 15px;
+        transition: 0.5s;
 
         &:hover {
-            background-color: ${({ theme }) => theme.redButtonLighter};
+            filter: brightness(110%);
         }
         &:active {
             transform: scale(0.85);
+            filter: brightness(120%);
         }
     `}
 

@@ -11,7 +11,7 @@ export const SwitchContainer = styled.aside`
 
 export const Label = styled.label`
     font-weight: 700;
-    color: ${({ theme }) => theme.sectionText};
+    color: ${({ theme }) => theme.colors.sectionText};
     margin-left: 10px;
 
     ${({ toggle }) => toggle && css`
@@ -19,21 +19,21 @@ export const Label = styled.label`
         display: block;
         padding: 5px 10px;
         width: 65px;
-        background-color: ${({ theme }) => theme.switch};
-        background-image: ${({ theme }) => theme.switch};
+        background-color: ${({ theme }) => theme.colors.switch};
+        background-image: ${({ theme }) => theme.colors.switch};
         transition: all 0.5s;
         cursor: pointer;
-        box-shadow: 1px 1px 2px 1px ${({ theme }) => theme.shadow};
+        box-shadow: 1px 1px 2px 1px ${({ theme }) => theme.colors.shadow};
 
         &::after {
             content: "";
             display: block;
             height: 20px;
             width: 20px;
-            background-color: ${({ theme }) => theme.background};
-            border: 1px solid ${({ theme }) => theme.sectionText};
+            background-color: ${({ theme }) => theme.colors.background};
+            border: 1px solid ${({ theme }) => theme.colors.sectionText};
             transition: all 0.3s;
-            transform: ${({ theme }) => theme.translate};;
+            transform: ${({ theme }) => theme.colors.translate};;
         }
 
         &:hover {
@@ -48,7 +48,7 @@ export const Button = styled.button`
 
     ${({ toggled }) => toggled && css`   
         +Label::after {
-            transform: ${({ theme }) => theme.translate};;
+            transform: ${({ theme }) => theme.colors.translate};;
         }
     `}
 `;
