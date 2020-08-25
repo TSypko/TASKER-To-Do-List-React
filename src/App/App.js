@@ -21,6 +21,7 @@ function App() {
   
   const { tasks,
     addTask,
+    editTask,
     removeTask,
     toggleTaskDone,
     setAllDone,
@@ -66,6 +67,7 @@ function App() {
                   removeTask={removeTask}
                   toggleTaskDone={toggleTaskDone}
                   toggleEditTask={toggleEditTask}
+                  editTask={editTask}
                 />
               }
             />

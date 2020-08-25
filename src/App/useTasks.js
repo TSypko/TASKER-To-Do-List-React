@@ -15,6 +15,15 @@ export const useTasks = () => {
         );
     };
 
+    const editTask = (editTaskContent, id) => {
+        setTasks(tasks => tasks.map(task => {
+            if (task.id === id) {
+                return { ...task, content: editTaskContent, edit: false};
+            };
+            return task;
+        }))
+    };
+
     const removeTask = (id) => {
         setTasks(tasks => tasks.filter(task => task.id !== id));
     };
@@ -27,6 +36,7 @@ export const useTasks = () => {
             return task;
         }))
     };
+
     const toggleEditTask = (id) => {
         setTasks(tasks => tasks.map(task => {
             if (task.id === id) {
@@ -46,6 +56,7 @@ export const useTasks = () => {
     return {
         tasks,
         addTask,
+        editTask,
         removeTask,
         toggleTaskDone,
         setAllDone,
