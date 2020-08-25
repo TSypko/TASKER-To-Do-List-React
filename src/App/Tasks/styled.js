@@ -38,7 +38,10 @@ export const Paragraph = styled.p`
         font-style: italic;
     `}
 `;
+
 export const DateParagraph = styled.p`
+    display: flex;
+    justify-content: space-between;
     font-weight: 400;
     max-width: 100%;
     flex-grow: 1;
@@ -48,8 +51,16 @@ export const DateParagraph = styled.p`
     border-bottom: 1px solid ${({ theme }) => theme.colors.sectionText};   
 
     @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
-        font-size: 13px;
+        font-size: 12px;
     }
+`;
+
+export const Date = styled.span`
+    ${({ edited }) => edited && css`
+        text-align: right;
+        font-style: italic;
+    `}
+    
 `;
 
 export const List = styled.ul`

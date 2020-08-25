@@ -5,7 +5,8 @@ import {
     Item,
     Statement,
     Button,
-    DateParagraph
+    DateParagraph,
+    Date
 } from "./styled"
 import EditForm from "./EditForm"
 
@@ -51,7 +52,8 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone, toggleEditTask, ed
                         />
                     </Item >
                     <DateParagraph key={task.date}>
-                        {task.date}
+                        <Date>{task.date}</Date>
+                        <Date edited>{task.editDate}</Date>
                     </DateParagraph>
                 </>
             )}
