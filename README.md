@@ -5,11 +5,12 @@
 # TASKER - TO DO LIST MANAGMENT
 **LIVE LINK:** [https://tsypko.github.io/TASKER-To-Do-List-React/](https://tsypko.github.io/TASKER-To-Do-List-React/)
 
-- v. 1.1.3 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- v. 1.2.0 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## DESCRIPTION
 To Do List app created during ,*,Become A Front End Developer"* course provided by *Youcode Academy*.
-It helps in scheduling tasks, allowing you to add, check and delete them.
+It helps in scheduling tasks, allowing you to add, check, edit and delete them.
+Tasks will be saved in local storage memory of your brower.
 
 ### TECHNOLOGIES USED:
 
@@ -20,7 +21,7 @@ It helps in scheduling tasks, allowing you to add, check and delete them.
 - JavaScript ES6+
 - Styled Components
 - npm
-
+- locastorage
 
 ### METHODOLOGIES USED:
 
@@ -36,9 +37,11 @@ It helps in scheduling tasks, allowing you to add, check and delete them.
 4. Once you will add task, it will be shown on list below called **TASK LIST** 
 5. You can check task if it's done by clicking **GREEN BUTTON**
 
-6. You can  remove task if it's done by clicking **RED BUTTON**
+6. You can edit task by clicking **YELLOW BUTTON**
 
-7. Optional, you can use **SET ALL TASKS DONE** to check all tasks, use **HIDE DONE** to make done tasks hidden or use **REMOVE ALL** to delete all tasks.
+7. You can  remove task if it's done by clicking **RED BUTTON**
+
+8. Optional, you can use **SET ALL TASKS DONE** to check all tasks, use **HIDE DONE** to make done tasks hidden or use **REMOVE ALL** to delete all tasks.
 
 ![usage-gif](https://raw.githubusercontent.com/TSypko/TASKER-To-Do-List-React/master/toDoList__usage.gif)
 
@@ -56,6 +59,7 @@ Please feel free to contact with author: [tsypko@gmail.com](tsypko@gmail.com)
 
 ### VERSION HISTORY
 
+- v. 1.2.0 - added EDIT functionality
 - v. 1.1.3 - minor script upgrades
 - v. 1.1.2 - code updated with custom hooks
 - v. 1.1.1 - code updated with styled components usage
