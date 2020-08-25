@@ -24,7 +24,8 @@ function App() {
     removeTask,
     toggleTaskDone,
     setAllDone,
-    removeAllTasks
+    removeAllTasks,
+    toggleEditTask,
   } = useTasks();
 
   const toggleHideDone = () => {
@@ -64,6 +65,7 @@ function App() {
                   hideDone={hideDone}
                   removeTask={removeTask}
                   toggleTaskDone={toggleTaskDone}
+                  toggleEditTask={toggleEditTask}
                 />
               }
             />

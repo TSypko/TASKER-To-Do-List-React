@@ -27,6 +27,14 @@ export const useTasks = () => {
             return task;
         }))
     };
+    const toggleEditTask = (id) => {
+        setTasks(tasks => tasks.map(task => {
+            if (task.id === id) {
+                return { ...task, edit: !task.edit };
+            };
+            return task;
+        }))
+    };
 
     const setAllDone = () => {
         setTasks(tasks => tasks.map(task => ({ ...task, done: true })));
@@ -41,6 +49,7 @@ export const useTasks = () => {
         removeTask,
         toggleTaskDone,
         setAllDone,
-        removeAllTasks
+        removeAllTasks,
+        toggleEditTask
     };
 };

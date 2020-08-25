@@ -1,7 +1,8 @@
 import React from "react";
 import { Paragraph, List, Item, Statement, Button } from "./styled"
+import EditForm from "./EditForm"
 
-const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
+const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone, toggleEditTask }) => {
     if (!tasks.length) {
         return (
             <Paragraph centered>
@@ -23,10 +24,14 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => {
                         done={task.done}
                     />
                     <Paragraph done={task.done}>
-                        {task.content}
+                        {task.edit
+                            ? <EditForm edit={task.edit} value={task.content}/>
+                            : task.content}
+
                     </Paragraph>
                     <Button
                         edit
+                        onClick={() => toggleEditTask(task.id)}
                     />
                     <Button
                         onClick={() => removeTask(task.id)}

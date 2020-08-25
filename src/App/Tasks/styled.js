@@ -96,6 +96,7 @@ export const Button = styled.button`
         background-color: ${({ theme }) => theme.colors.yellowButton};
         background-image: url(${pen});
         background-size: 75%;
+        margin-left: 15px;
 
         &:hover {
             filter: brightness(110%);
