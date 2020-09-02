@@ -5,10 +5,10 @@ import Header from '../../common/Header';
 import Main from '../../common/Main';
 import Section from '../../common/Section';
 import Form from './Form';
-import Tasks from './TasksList';
+import TasksList from './TasksList';
 import Footer from './Footer';
 
-function TasksList() {
+function Tasks() {
 
     const [hideDone, setHideDone] = useLocalStorageState("hideDone", false);
 
@@ -39,7 +39,7 @@ function TasksList() {
                 <Section
                     title="task list"
                     body={
-                        <Tasks
+                        <TasksList
                             tasks={tasks}
                             hideDone={hideDone}
                             removeTask={removeTask}
@@ -61,4 +61,4 @@ function TasksList() {
     );
 }
 
-export default TasksList;
+export default Tasks;

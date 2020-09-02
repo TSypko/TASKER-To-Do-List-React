@@ -10,7 +10,7 @@ import {
 } from "./styled"
 import EditForm from "./EditForm"
 
-const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone, toggleEditTask, editTask }) => {
+const TasksList = ({ tasks, hideDone, removeTask, toggleTaskDone, toggleEditTask, editTask }) => {
     if (!tasks.length) {
         return (
             <Paragraph centered>
@@ -61,4 +61,4 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone, toggleEditTask, ed
     )
 };
 
-export default Tasks;
+export default TasksList;
