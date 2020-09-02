@@ -1,18 +1,43 @@
-import React, { useState } from 'react'
-import { EditFormInput, Button, FormContainer } from "./styled"
+import React, { useState } from 'react';
+import { EditFormInput, Button, FormContainer } from "./styled";
+import { useDispatch } from "react-redux";
+import { editTask} from "../../tasksSlice";
+import { useCurrentDate } from "../../useCurrentDate";
 
-const EditForm = ({ edit, value, editTask, taskID }) => {
+const EditForm = ({ task }) => {
 
-    const [editTaskContent, setEditTaskContent] = useState(value);
+    const dispatch = useDispatch();
+
+    const [editTaskContent, setEditTaskContent] = useState(task.content);
+
+    const date = useCurrentDate();
+    const editDate = (rawDate) => {
+        const dateString = rawDate.toLocaleDateString(
+            "en-EN", {
+            day: "numeric",
+            month: "long"
+        });
+        const timeString = rawDate.toLocaleTimeString();
+        return `(edited at ${timeString} on ${dateString})`
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
         const editTaskContentTrimmed = editTaskContent.trim();
-        if (!editTaskContentTrimmed) {
-            return
+        if (editTaskContentTrimmed !== task.content) {
+            dispatch(editTask({
+                ...task,
+                content: editTaskContentTrimmed,
+                edit: false,
+                editDate: editDate(date),
+            }));
         }
-        event.preventDefault();
-        editTask(editTaskContentTrimmed, taskID);
+        else {
+            dispatch(editTask({
+                ...task,
+                edit: false,
+            }));
+        };
     };
 
     return (
@@ -20,7 +45,7 @@ const EditForm = ({ edit, value, editTask, taskID }) => {
 
             <FormContainer>
                 <EditFormInput
-                    edit={edit}
+                    edit={task.edit}
                     value={editTaskContent}
                     type="text"
                     autoFocus
