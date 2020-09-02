@@ -33,9 +33,15 @@ export const Paragraph = styled.p`
         text-align: center;
         font-style: italic;
     `}
+    
     ${({ done }) => done && css`
         text-decoration: line-through;
         font-style: italic;
+    `}
+
+    ${({ edit }) => edit && css`
+        text-decoration: unset;
+        font-style: unset;
     `}
 `;
 

@@ -45,7 +45,7 @@ const TasksList = () => {
                             active
                             done={task.done}
                         />
-                        <Paragraph done={task.done}>
+                        <Paragraph done={task.done} edit={task.edit}>
                             {task.edit
                                 ? <EditForm
                                     task={task}
