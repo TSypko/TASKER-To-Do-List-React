@@ -1,5 +1,5 @@
-import { useLocalStorageState } from "./useLocalStorageState";
-import { useCurrentDate } from "./useCurrentDate";
+import { useLocalStorageState } from "../../useLocalStorageState";
+import { useCurrentDate } from "../../useCurrentDate";
 
 export const useTasks = () => {
 

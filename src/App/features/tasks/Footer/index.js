@@ -1,6 +1,6 @@
 import React from 'react';
 import Buttons from './Buttons';
-import Section from '../Section';
+import Section from '../../../common/Section';
 import { FooterContainer } from "./styled"
 
 const Footer = ({ tasks, hideDone, toggleHideDone, setAllDone, removeAllTasks }) => (
