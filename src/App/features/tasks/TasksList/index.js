@@ -51,7 +51,7 @@ const TasksList = ({ tasks, hideDone, removeTask, toggleTaskDone, toggleEditTask
                             remove
                         />
                     </Item >
-                    <DateParagraph >
+                    <DateParagraph hidden={task.done && hideDone}>
                         <Date>{task.date}</Date>
                         <Date edited>{task.editDate}</Date>
                     </DateParagraph>

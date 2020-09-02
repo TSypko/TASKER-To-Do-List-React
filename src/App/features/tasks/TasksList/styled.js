@@ -50,6 +50,10 @@ export const DateParagraph = styled.p`
     padding-bottom: 5px;
     border-bottom: 1px solid ${({ theme }) => theme.colors.sectionText};   
 
+    ${({ hidden }) => hidden && css`
+        display: none;
+    `}
+    
     @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
         font-size: 12px;
     }
