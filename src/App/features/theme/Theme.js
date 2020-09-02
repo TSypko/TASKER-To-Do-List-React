@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import { themes } from "./themes";
 import { GlobalStyles } from "./Globalstyle";
@@ -11,6 +11,11 @@ import Switch from "./Switch";
 function Theme({ body }) {
 
     const { theme } = useSelector(selectTheme);
+
+    useEffect(() => {
+        localStorage.setItem("currentTheme",
+            JSON.stringify(theme));
+    }, [theme]);
 
     return (
         <ThemeProvider theme={theme === "light" ? themes.light : themes.dark}>

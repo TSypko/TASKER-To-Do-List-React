@@ -20,7 +20,9 @@ const TasksList = () => {
     useEffect(() => {
         localStorage.setItem("tasks",
             JSON.stringify(tasks));
-    }, [tasks]);
+        localStorage.setItem("hideDone",
+            JSON.stringify(hideDone));
+    }, [tasks, hideDone]);
 
     if (!tasks.length) {
         return (

@@ -4,7 +4,7 @@ const tasksSlice = createSlice({
     name: "tasks",
     initialState: {
         tasks: JSON.parse(localStorage.getItem("tasks")) || [],
-        hideDone: false,
+        hideDone: JSON.parse(localStorage.getItem("hideDone")) || false,
     },
     reducers: {
         addTask: ({ tasks }, { payload }) => {
