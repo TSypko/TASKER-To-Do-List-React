@@ -1,4 +1,7 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { selectTasks, toggleTaskEdit, removeTask, toggleTaskDone, toggleSavedTasks } from "../tasksSlice";
+import { selectHideDone } from "../hideDoneSlice";
 import {
     Paragraph,
     List,
@@ -7,10 +10,15 @@ import {
     Button,
     DateParagraph,
     Date
-} from "./styled"
-import EditForm from "./EditForm"
+} from "./styled";
+import EditForm from "./EditForm";
 
-const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone, toggleEditTask, editTask }) => {
+const TasksList = () => {
+
+    const dispatch = useDispatch();
+    const { tasks } = useSelector(selectTasks);
+    const { hideDone } = useSelector(selectHideDone);
+
     if (!tasks.length) {
         return (
             <Paragraph centered>
@@ -28,30 +36,27 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone, toggleEditTask, ed
                 <React.Fragment key={task.id}>
                     <Item hidden={task.done && hideDone}>
                         <Button
-                            onClick={() => toggleTaskDone(task.id)}
+                            onClick={() => dispatch(toggleTaskDone(task.id))}
                             active
                             done={task.done}
                         />
                         <Paragraph done={task.done}>
                             {task.edit
                                 ? <EditForm
-                                    edit={task.edit}
-                                    value={task.content}
-                                    editTask={editTask}
-                                    taskID={task.id}
+                                    task={task}
                                 />
                                 : task.content}
                         </Paragraph>
                         <Button
                             edit
-                            onClick={() => toggleEditTask(task.id)}
+                            onClick={() => dispatch(toggleTaskEdit(task.id))}
                         />
                         <Button
-                            onClick={() => removeTask(task.id)}
+                            onClick={() => dispatch(removeTask(task.id))}
                             remove
                         />
                     </Item >
-                    <DateParagraph >
+                    <DateParagraph hidden={task.done && hideDone}>
                         <Date>{task.date}</Date>
                         <Date edited>{task.editDate}</Date>
                     </DateParagraph>
@@ -61,4 +66,4 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone, toggleEditTask, ed
     )
 };
 
-export default Tasks;
+export default TasksList;
