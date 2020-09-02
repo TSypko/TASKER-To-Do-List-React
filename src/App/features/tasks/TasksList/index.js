@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { selectTasks } from "../tasksSlice";
 import {
     Paragraph,
     List,
@@ -7,10 +9,13 @@ import {
     Button,
     DateParagraph,
     Date
-} from "./styled"
-import EditForm from "./EditForm"
+} from "./styled";
+import EditForm from "./EditForm";
 
-const TasksList = ({ tasks, hideDone, removeTask, toggleTaskDone, toggleEditTask, editTask }) => {
+const TasksList = ({ hideDone, removeTask, toggleTaskDone, toggleEditTask, editTask }) => {
+
+    const { tasks } = useSelector(selectTasks);
+
     if (!tasks.length) {
         return (
             <Paragraph centered>
