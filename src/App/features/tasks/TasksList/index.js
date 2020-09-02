@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectTasks, toggleTaskEdit, removeTask, toggleTaskDone } from "../tasksSlice";
-import { selectHideDone } from "../hideDoneSlice";
 import {
     Paragraph,
     List,
@@ -16,8 +15,12 @@ import EditForm from "./EditForm";
 const TasksList = () => {
 
     const dispatch = useDispatch();
-    const { tasks } = useSelector(selectTasks);
-    const { hideDone } = useSelector(selectHideDone);
+    const { tasks, hideDone } = useSelector(selectTasks);
+
+    useEffect(() => {
+        localStorage.setItem("tasks",
+            JSON.stringify(tasks));
+    }, [tasks]);
 
     if (!tasks.length) {
         return (
