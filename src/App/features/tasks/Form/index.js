@@ -8,22 +8,21 @@ import { useCurrentDate } from "../useCurrentDate";
 const Form = () => {
 
     const dispatch = useDispatch();
-
     const [newTaskContent, setNewTaskContent] = useState("");
     const inputRef = useRef();
+    const date = useCurrentDate();
 
     const focus = () => {
         inputRef.current.focus();
     };
-
-    const date = useCurrentDate();
-    const createDate = (rawDate) => {
-        const dateString = rawDate.toLocaleDateString(
+  
+    const createDate = (date) => {
+        const dateString = date.toLocaleDateString(
             "en-EN", {
             day: "numeric",
             month: "long"
         });
-        const timeString = rawDate.toLocaleTimeString();
+        const timeString = date.toLocaleTimeString();
         return `Created at ${timeString} on ${dateString}`
     };
 

@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
 import { EditFormInput, Button, FormContainer } from "./styled";
 import { useDispatch } from "react-redux";
-import { editTask} from "../../tasksSlice";
+import { editTask } from "../../tasksSlice";
 import { useCurrentDate } from "../../useCurrentDate";
 
 const EditForm = ({ task }) => {
 
     const dispatch = useDispatch();
-
     const [editTaskContent, setEditTaskContent] = useState(task.content);
-
     const date = useCurrentDate();
-    const editDate = (rawDate) => {
-        const dateString = rawDate.toLocaleDateString(
+    
+    const editDate = (date) => {
+        const dateString = date.toLocaleDateString(
             "en-EN", {
             day: "numeric",
             month: "long"
         });
-        const timeString = rawDate.toLocaleTimeString();
+        const timeString = date.toLocaleTimeString();
         return `(edited at ${timeString} on ${dateString})`
     };
 
@@ -42,7 +41,6 @@ const EditForm = ({ task }) => {
 
     return (
         <form onSubmit={onFormSubmit}>
-
             <FormContainer>
                 <EditFormInput
                     edit={task.edit}
@@ -56,7 +54,7 @@ const EditForm = ({ task }) => {
             </Button>
             </FormContainer>
         </form>
-    )
-}
+    );
+};
 
 export default EditForm;

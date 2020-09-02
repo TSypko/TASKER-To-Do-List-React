@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from "./styled"
+import { Image } from "./styled";
 import logo from './logo.svg';
 
 const Logo = () => (

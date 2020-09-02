@@ -8,6 +8,6 @@ const Section = ({ title, body }) => (
         }
         {body}
     </SectionContainer>
-)
+);
 
 export default Section;

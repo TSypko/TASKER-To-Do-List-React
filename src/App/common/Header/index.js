@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderContainer, HeaderSection, HeaderTitle } from "./styled"
+import { HeaderContainer, HeaderSection, HeaderTitle } from "./styled";
 import Logo from "./Logo";
 
 const Header = ({ title }) => (

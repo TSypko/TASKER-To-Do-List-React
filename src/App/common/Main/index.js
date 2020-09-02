@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Main = ({children}) => (
+const Main = ({ children }) => (
     <main>
         {children}
     </main>

@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { selectTasks } from "../tasksSlice";
 import Buttons from './Buttons';
 import Section from '../../../common/Section';
-import { FooterContainer } from "./styled"
+import { FooterContainer } from "./styled";
 
 const Footer = () => {
 

@@ -1,12 +1,12 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { themeChange, selectTheme } from "../themeSlice";
-import { SwitchContainer, Label, Button } from "./styled"
+import { SwitchContainer, Label, Button } from "./styled";
 
 const Switch = () => {
 
   const { theme } = useSelector(selectTheme);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
 
@@ -21,7 +21,7 @@ const Switch = () => {
       <Label toggle htmlFor="switch"></Label>
     </SwitchContainer>
 
-  )
+  );
 };
 
 export default Switch;

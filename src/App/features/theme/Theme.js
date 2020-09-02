@@ -22,7 +22,7 @@ function Theme({ body }) {
                 </FlexContainer>
             </Wrapper>
         </ThemeProvider>
-    )
+    );
 };
 
 export default Theme;

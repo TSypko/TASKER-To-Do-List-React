@@ -34,6 +34,6 @@ const Buttons = () => {
             </ButtonContainer>
         )
     );
-}
+};
 
 export default Buttons;

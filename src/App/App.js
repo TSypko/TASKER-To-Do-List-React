@@ -7,6 +7,6 @@ function App() {
   return (
     <Theme body={<Tasks />} />
   );
-}
+};
 
 export default App;
