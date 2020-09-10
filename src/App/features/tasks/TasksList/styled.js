@@ -60,6 +60,11 @@ export const DateParagraph = styled.p`
         display: none;
     `}
     
+    ${({ done }) => done && css`
+        text-decoration: line-through;
+        font-style: italic;
+    `}
+    
     @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
         font-size: 12px;
     }
