@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectTasks, toggleTaskEdit, removeTask, toggleTaskDone } from "../tasksSlice";
 import {
@@ -16,13 +16,6 @@ const TasksList = () => {
 
     const dispatch = useDispatch();
     const { tasks, hideDone } = useSelector(selectTasks);
-
-    useEffect(() => {
-        localStorage.setItem("tasks",
-            JSON.stringify(tasks));
-        localStorage.setItem("hideDone",
-            JSON.stringify(hideDone));
-    }, [tasks, hideDone]);
 
     if (!tasks.length) {
         return (
