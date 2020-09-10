@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectTasks, toggleTaskEdit, removeTask, toggleTaskDone } from "../tasksSlice";
+import { selectTasks, removeTask, toggleTaskDone } from "../tasksSlice";
 import {
     Paragraph,
     List,
@@ -16,6 +16,13 @@ const TasksList = () => {
 
     const dispatch = useDispatch();
     const { tasks, hideDone } = useSelector(selectTasks);
+    const [editTaskId, setTaskEditId] = useState(null);
+
+    const toggleTaskEdit = (task) => {
+        editTaskId !== task
+            ? setTaskEditId(task)
+            : setTaskEditId(null)
+    };
 
     if (!tasks.length) {
         return (
@@ -38,23 +45,24 @@ const TasksList = () => {
                             active
                             done={task.done}
                         />
-                        <Paragraph done={task.done} edit={task.edit}>
-                            {task.edit
+                        <Paragraph as="div" done={task.done} edit={editTaskId}>
+                            {editTaskId === task.id
                                 ? <EditForm
                                     task={task}
+                                    toggleTaskEdit={toggleTaskEdit}
                                 />
                                 : task.content}
                         </Paragraph>
                         <Button
                             edit
-                            onClick={() => dispatch(toggleTaskEdit(task.id))}
+                            onClick={() => toggleTaskEdit(task.id)}
                         />
                         <Button
                             onClick={() => dispatch(removeTask(task.id))}
                             remove
                         />
                     </Item >
-                    <DateParagraph hidden={task.done && hideDone}>
+                    <DateParagraph hidden={task.done && hideDone} done={task.done} >
                         <Date>{task.date}</Date>
                         <Date edited>{task.editDate}</Date>
                     </DateParagraph>
