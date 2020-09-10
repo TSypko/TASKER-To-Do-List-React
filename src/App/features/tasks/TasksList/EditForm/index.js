@@ -4,12 +4,12 @@ import { useDispatch } from "react-redux";
 import { editTask } from "../../tasksSlice";
 import { useCurrentDate } from "../../useCurrentDate";
 
-const EditForm = ({ task }) => {
+const EditForm = ({ task, toggleTaskEdit }) => {
 
     const dispatch = useDispatch();
     const [editTaskContent, setEditTaskContent] = useState(task.content);
     const date = useCurrentDate();
-    
+
     const editDate = (date) => {
         const dateString = date.toLocaleDateString(
             "en-EN", {
@@ -27,15 +27,15 @@ const EditForm = ({ task }) => {
             dispatch(editTask({
                 ...task,
                 content: editTaskContentTrimmed,
-                edit: false,
                 editDate: editDate(date),
             }));
+            toggleTaskEdit();
         }
         else {
             dispatch(editTask({
                 ...task,
-                edit: false,
             }));
+            toggleTaskEdit();
         };
     };
 
@@ -43,7 +43,7 @@ const EditForm = ({ task }) => {
         <form onSubmit={onFormSubmit}>
             <FormContainer>
                 <EditFormInput
-                    edit={task.edit}
+                    edit={task.id}
                     value={editTaskContent}
                     type="text"
                     autoFocus
