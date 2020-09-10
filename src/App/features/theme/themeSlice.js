@@ -6,13 +6,10 @@ const themeSlice = createSlice({
         theme: JSON.parse(localStorage.getItem("currentTheme")) || "light",
     },
     reducers: {
-        themeChange: (state, { payload }) => {
-            if (payload === "light") {
-                state.theme = "dark"
-            }
-            else {
-                state.theme = "light"
-            };
+        themeChange: (state) => {
+           state.theme = (state.theme === "light")
+           ? "dark"
+           : "light"
         }
     },
 },
