@@ -35,10 +35,7 @@ const Form = () => {
         event.preventDefault();
         dispatch(addTask({
             date: createDate(date),
-            editDate: null,
             content: newTaskContentTrimmed,
-            done: false,
-            edit: false,
             id: nanoid(),
         }));
         setNewTaskContent("");
