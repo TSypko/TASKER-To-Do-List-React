@@ -4,7 +4,7 @@ export const SectionContainer = styled.section`
     background-color: ${({ theme }) => theme.colors.sectionBackground};
     color: ${({ theme }) => theme.colors.sectionText};
     width: 100%;
-    padding: 20px;
+    padding: 10px 20px;
     margin: 10px 0px;
     box-shadow: 1px 1px 2px 1px ${({ theme }) => theme.colors.shadow};
 `;
