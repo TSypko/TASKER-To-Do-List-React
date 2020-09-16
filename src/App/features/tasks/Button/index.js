@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 export default styled.button`
     text-transform: uppercase;
+    text-align: center;
     cursor: pointer;
     border: none;
     padding: 10px 20px;
