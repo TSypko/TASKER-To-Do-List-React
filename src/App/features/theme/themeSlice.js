@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getItemFromLocalStorage } from "../itemLocalStorage";
 
 const themeSlice = createSlice({
     name: "theme",
     initialState: {
-        theme: JSON.parse(localStorage.getItem("currentTheme")) || "light",
+        theme: getItemFromLocalStorage("currentTheme") || "light",
     },
     reducers: {
         themeChange: (state) => {
