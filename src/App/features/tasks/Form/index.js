@@ -6,6 +6,8 @@ import { FormContainer } from "./styled";
 import { useCurrentDate } from "../useCurrentDate";
 import SubmitButton from '../SubmitButton';
 import FormInput from '../FormInput';
+import Button from '../Button';
+import ButtonContainer from '../ButtonContainer';
 
 const Form = () => {
 
@@ -17,7 +19,7 @@ const Form = () => {
     const focus = () => {
         inputRef.current.focus();
     };
-  
+
     const createDate = (date) => {
         const dateString = date.toLocaleDateString(
             "en-EN", {
@@ -45,19 +47,26 @@ const Form = () => {
     };
 
     return (
-        <FormContainer onSubmit={onFormSubmit}>
-            <FormInput
-                ref={inputRef}
-                type="text"
-                autoFocus
-                placeholder="write your task here"
-                value={newTaskContent}
-                onChange={({ target }) => setNewTaskContent(target.value)}
-            />
-            <SubmitButton>
-                submit
+        <>
+            <FormContainer onSubmit={onFormSubmit}>
+                <FormInput
+                    ref={inputRef}
+                    type="text"
+                    autoFocus
+                    placeholder="write your task here"
+                    value={newTaskContent}
+                    onChange={({ target }) => setNewTaskContent(target.value)}
+                />
+                <SubmitButton>
+                    submit
             </SubmitButton>
-        </FormContainer>
+            </FormContainer>
+            <ButtonContainer>
+                <Button green>
+                    Download example tasks
+                </Button>
+            </ButtonContainer>
+        </>
     );
 };
 export default Form;
