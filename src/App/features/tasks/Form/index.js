@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
-import { addTask } from "../tasksSlice";
+import { addTask, fetchExampleTasks, selectTasks } from "../tasksSlice";
 import { FormContainer } from "./styled";
 import { useCurrentDate } from "../useCurrentDate";
 import SubmitButton from '../SubmitButton';
@@ -15,6 +15,7 @@ const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");
     const inputRef = useRef();
     const date = useCurrentDate();
+    const { loading } = useSelector(selectTasks);
 
     const focus = () => {
         inputRef.current.focus();
@@ -62,8 +63,13 @@ const Form = () => {
             </SubmitButton>
             </FormContainer>
             <ButtonContainer>
-                <Button green>
-                    Download example tasks
+                <Button
+                    green
+                    disabled={loading}
+                    onClick={() => dispatch(fetchExampleTasks())}>
+                    {loading
+                        ? "Loading tasks..."
+                        : "Download example tasks"}
                 </Button>
             </ButtonContainer>
         </>
