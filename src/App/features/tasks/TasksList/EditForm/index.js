@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { EditFormInput, Button, FormContainer } from "./styled";
 import { useDispatch } from "react-redux";
+import { EditFormInput, FormContainer } from "./styled";
+import SubmitButton from "../../SubmitButton"
 import { editTask } from "../../tasksSlice";
 import { useCurrentDate } from "../../useCurrentDate";
 
@@ -49,9 +50,9 @@ const EditForm = ({ task, toggleTaskEdit }) => {
                     autoFocus
                     onChange={({ target }) => setEditTaskContent(target.value)}
                 />
-                <Button>
+                <SubmitButton>
                     submit
-            </Button>
+                </SubmitButton>
             </FormContainer>
         </form>
     );
