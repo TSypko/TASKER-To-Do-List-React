@@ -2,8 +2,10 @@ import React, { useState, useRef } from 'react';
 import { useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
 import { addTask } from "../tasksSlice";
-import { FormContainer, FormInput, FormButton } from "./styled";
+import { FormContainer } from "./styled";
 import { useCurrentDate } from "../useCurrentDate";
+import SubmitButton from '../SubmitButton';
+import FormInput from '../FormInput';
 
 const Form = () => {
 
@@ -52,9 +54,9 @@ const Form = () => {
                 value={newTaskContent}
                 onChange={({ target }) => setNewTaskContent(target.value)}
             />
-            <FormButton>
+            <SubmitButton>
                 submit
-            </FormButton>
+            </SubmitButton>
         </FormContainer>
     );
 };
