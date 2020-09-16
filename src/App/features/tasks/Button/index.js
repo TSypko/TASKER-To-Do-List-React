@@ -7,7 +7,6 @@ export default styled.button`
     border: none;
     padding: 10px 20px;
     color: #ffffff;
-    font-weight: bold;
     letter-spacing: 1px;
     margin: 10px;
     transition: color 0.4s;
@@ -16,7 +15,6 @@ export default styled.button`
 
     ${({ green }) => green && css`
         background-color: ${({ theme }) => theme.colors.greenButton};
-        border-radius: 5px;
         transition: 0.5s;
 
         &:hover {
@@ -36,7 +34,6 @@ export default styled.button`
 
     ${({ red }) => red && css`
             background-color: ${({ theme }) => theme.colors.redButton};
-            border-radius: 5px;
             transition: 0.3s;
 
         &:hover {
