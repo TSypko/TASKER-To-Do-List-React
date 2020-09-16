@@ -1,18 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
+import createSagaMiddleware from "redux-saga";
 import tasksReducer from "./features/tasks/tasksSlice";
 import themeReducer from "./features/theme/themeSlice";
+import rootSaga from "./features/rootSaga";
+
+const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
     reducer: {
         tasks: tasksReducer,
         theme: themeReducer,
     },
+    middleware: [sagaMiddleware],
 });
 
-store.subscribe(() => {
-    localStorage.setItem("currentTheme", JSON.stringify(store.getState().theme.theme))
-    localStorage.setItem("tasks", JSON.stringify(store.getState().tasks.tasks))
-    localStorage.setItem("hideDone", JSON.stringify(store.getState().tasks.hideDone))
-})
+sagaMiddleware.run(rootSaga);
 
 export default store;
