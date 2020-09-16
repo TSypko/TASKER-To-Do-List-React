@@ -13,7 +13,7 @@ export default styled.button`
     transition: transform 0.1s;
     transition: background-color 0.4s;
 
-    ${({ doneAll }) => doneAll && css`
+    ${({ green }) => green && css`
         background-color: ${({ theme }) => theme.colors.greenButton};
         border-radius: 5px;
         transition: 0.5s;
@@ -33,27 +33,7 @@ export default styled.button`
         }
     `}
 
-    ${({ hideDone }) => hideDone && css`
-            background-color: ${({ theme }) => theme.colors.greenButton};
-            border-radius: 5px;
-            transition: 0.3s;
-
-        &:hover {
-            filter: brightness(110%);
-        }
-        
-        &:active {
-            transform: scale(0.9);
-            filter: brightness(120%);
-        }
-        &:disabled {
-            background-color: #ccc;
-            filter: brightness(100%);
-            cursor: default;
-        }
-    `}
-
-    ${({ removeAll }) => removeAll && css`
+    ${({ red }) => red && css`
             background-color: ${({ theme }) => theme.colors.redButton};
             border-radius: 5px;
             transition: 0.3s;

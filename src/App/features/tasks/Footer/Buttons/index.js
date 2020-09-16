@@ -14,19 +14,19 @@ const Buttons = () => {
             <ButtonContainer>
                 <Button
                     onClick={() => dispatch(toggleAllTasksDone())}
-                    doneAll
+                    green
                     disabled={tasks.every(({ done }) => done)}>
                     set all as done
                 </Button>
                 <Button
                     onClick={() => dispatch(toggleHideDone())}
-                    hideDone
+                    green
                     disabled={tasks.every(({ done }) => !done)}>
                     {hideDone ? "show" : "hide"} done
                 </Button>
                 <Button
                     onClick={() => dispatch(removeAllTasks())}
-                    removeAll>
+                    red>
                     remove all tasks
                 </Button>
             </ButtonContainer>
