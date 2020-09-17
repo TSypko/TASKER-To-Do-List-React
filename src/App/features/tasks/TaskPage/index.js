@@ -11,8 +11,9 @@ function TaskPage() {
     const task = useSelector(state => getTaskById(state, id));
 
     return (
-        <>
-            <Main>
+        <Main>
+            {task !== undefined
+                ?
                 <Section
                     title={task.content}
                     body={
@@ -27,8 +28,12 @@ function TaskPage() {
                         </>
                     }
                 />
-            </Main>
-        </>
+                :
+                <Section
+                    title="Sorry, task not found"
+                />
+            }
+        </Main>
     );
 };
 
