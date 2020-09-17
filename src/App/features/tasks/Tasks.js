@@ -1,5 +1,4 @@
 import React from "react";
-import Header from '../../common/Header';
 import Main from '../../common/Main';
 import Section from '../../common/Section';
 import Form from './Form';
@@ -10,7 +9,6 @@ function Tasks() {
 
     return (
         <>
-            <Header title="TASKER" />
             <Main>
                 <Section
                     title="add new task"
