@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 import { EditFormInput, FormContainer } from "./styled";
 import SubmitButton from "../../SubmitButton"
-import { editTask } from "../../tasksSlice";
-import { useCurrentDate } from "../../useCurrentDate";
+import { editTask } from "../../../tasksSlice";
+import { useCurrentDate } from "../../../useCurrentDate";
 
 const EditForm = ({ task, toggleTaskEdit }) => {
 

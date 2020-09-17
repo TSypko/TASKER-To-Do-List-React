@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import ButtonContainer from "../../ButtonContainer";
 import Button from "../../Button"
-import { toggleAllTasksDone, selectTasks, removeAllTasks, toggleHideDone } from "../../tasksSlice";
+import { toggleAllTasksDone, selectTasks, removeAllTasks, toggleHideDone } from "../../../tasksSlice";
 
 const Buttons = () => {
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectTasks, removeTask, toggleTaskDone } from "../tasksSlice";
+import { selectTasks, removeTask, toggleTaskDone } from "../../tasksSlice";
 import {
     Paragraph,
     List,
