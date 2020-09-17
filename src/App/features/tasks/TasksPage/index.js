@@ -4,8 +4,9 @@ import Section from '../../../common/Section';
 import Form from './Form';
 import TasksList from './TasksList';
 import Footer from './Footer';
+import Search from "./Search";
 
-function Tasks() {
+function TasksPage() {
 
     return (
         <>
@@ -15,15 +16,17 @@ function Tasks() {
                     body={<Form />}
                 />
                 <Section
+                    title="search for task"
+                    body={<Search />}
+                />
+                <Section
                     title="task list"
                     body={<TasksList />}
                 />
             </Main>
-            <Footer
-
-            />
+            <Footer />
         </>
     );
 };
 
-export default Tasks;
+export default TasksPage;
