@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectTasks, removeTask, toggleTaskDone } from "../../tasksSlice";
+import { useLocation } from "react-router-dom";
+import {
+    selectTasks,
+    removeTask,
+    toggleTaskDone,
+    selectTasksByQuery
+} from "../../tasksSlice";
 import {
     Paragraph,
     List,
@@ -10,11 +16,16 @@ import {
     LinkItem
 } from "./styled";
 import EditForm from "./EditForm";
+import searchQueryParamName from "../../searchQueryParamName";
 
 const TasksList = () => {
 
+    const location = useLocation();
+    const query = (new URLSearchParams(location.search)).get(searchQueryParamName);
+
     const dispatch = useDispatch();
-    const { tasks, hideDone } = useSelector(selectTasks);
+    const tasks = useSelector(state => selectTasksByQuery(state, query));
+    const { hideDone } = useSelector(selectTasks);
     const [editTaskId, setTaskEditId] = useState(null);
 
     const toggleTaskEdit = (task) => {
