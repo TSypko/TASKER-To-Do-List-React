@@ -7,8 +7,6 @@ import {
     Item,
     Statement,
     Button,
-    DateParagraph,
-    Date,
     LinkItem
 } from "./styled";
 import EditForm from "./EditForm";
@@ -51,14 +49,16 @@ const TasksList = () => {
                             done={task.done}
                             edit={editTaskId}
                         >
-                            <LinkItem to={`/tasks/${task.id}`}>
-                                {editTaskId === task.id
-                                    ? <EditForm
-                                        task={task}
-                                        toggleTaskEdit={toggleTaskEdit}
-                                    />
-                                    : task.content}
-                            </LinkItem>
+
+                            {editTaskId === task.id
+                                ? <EditForm
+                                    task={task}
+                                    toggleTaskEdit={toggleTaskEdit}
+                                />
+                                : <LinkItem to={`/tasks/${task.id}`}>
+                                    {task.content}
+                                </LinkItem>}
+
                         </Paragraph>
                         <Button
                             edit
@@ -69,10 +69,6 @@ const TasksList = () => {
                             remove
                         />
                     </Item >
-                    <DateParagraph hidden={task.done && hideDone} done={task.done} >
-                        <Date>{task.date}</Date>
-                        <Date edited>{task.editDate}</Date>
-                    </DateParagraph>
                 </React.Fragment>
             )}
         </List >

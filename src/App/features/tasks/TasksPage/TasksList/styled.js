@@ -25,6 +25,8 @@ export const Paragraph = styled.p`
     overflow-wrap: break-word;
     word-wrap: break-word;
     margin: 5px 0px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.sectionText};  
 
     @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
         font-size: 16px;
@@ -44,39 +46,6 @@ export const Paragraph = styled.p`
         text-decoration: unset;
         font-style: unset;
     `}
-`;
-
-export const DateParagraph = styled.p`
-    display: flex;
-    justify-content: space-between;
-    font-weight: 400;
-    max-width: 100%;
-    flex-grow: 1;
-    font-size: 13px;
-    margin: 5px 0px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.sectionText};   
-
-    ${({ hidden }) => hidden && css`
-        display: none;
-    `}
-    
-    ${({ done }) => done && css`
-        text-decoration: line-through;
-        font-style: italic;
-    `}
-    
-    @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
-        font-size: 12px;
-    }
-`;
-
-export const Date = styled.span`
-    ${({ edited }) => edited && css`
-        text-align: right;
-        font-style: italic;
-    `}
-    
 `;
 
 export const List = styled.ul`
