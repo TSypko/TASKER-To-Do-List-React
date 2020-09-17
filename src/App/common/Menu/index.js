@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import Section from '../../common/Section';
-import { List, ListItem } from './styled';
+import { List, ListItem, LinkItem } from './styled';
 
 const Menu = () => {
   return (
@@ -13,10 +12,10 @@ const Menu = () => {
         <nav>
           <List>
             <ListItem>
-              <Link to="/">Tasks list</Link>
+              <LinkItem to="/tasks">Tasks list</LinkItem>
             </ListItem>
             <ListItem>
-            <Link to="/author">About</Link>
+            <LinkItem to="/author">About</LinkItem>
             </ListItem>
           </List>
         </nav>
