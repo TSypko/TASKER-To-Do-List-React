@@ -8,7 +8,8 @@ import {
     Statement,
     Button,
     DateParagraph,
-    Date
+    Date,
+    LinkItem
 } from "./styled";
 import EditForm from "./EditForm";
 
@@ -45,14 +46,18 @@ const TasksList = () => {
                             active
                             done={task.done}
                         />
+                       
                         <Paragraph as="div" done={task.done} edit={editTaskId}>
+                        <LinkItem to="/45">
                             {editTaskId === task.id
                                 ? <EditForm
                                     task={task}
                                     toggleTaskEdit={toggleTaskEdit}
                                 />
                                 : task.content}
+                        </LinkItem>
                         </Paragraph>
+                       
                         <Button
                             edit
                             onClick={() => toggleTaskEdit(task.id)}

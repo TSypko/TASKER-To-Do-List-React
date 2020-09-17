@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 import checked from "./checked.svg";
 import trash from "./trash.svg";
 import pen from "./pen.svg";
@@ -163,4 +164,13 @@ export const Button = styled.button`
         }
     `}
 
+`;
+
+export const LinkItem = styled(Link)`
+    text-decoration: none;
+    color: unset;
+
+    &:hover {
+        font-weight: bold;
+    }
 `;
