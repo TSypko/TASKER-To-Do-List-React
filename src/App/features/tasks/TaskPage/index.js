@@ -15,7 +15,7 @@ function TaskPage() {
             {task !== undefined
                 ?
                 <Section
-                    title={task.content}
+                    title={`${task.content} details:`}
                     body={
                         <>
                             <p>
