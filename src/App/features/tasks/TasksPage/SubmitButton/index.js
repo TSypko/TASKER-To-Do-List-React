@@ -10,6 +10,7 @@ color: ${({ theme }) => theme.colors.sectionBackground};
 letter-spacing: 1px;
 padding: 5px 10px;
 margin-left: 10px;
+margin-bottom: 10px;
 transition: color 0.4s, transform 0.1s, background-color 0.4s;
 
 @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
