@@ -1,8 +1,8 @@
 import React from "react";
-import Main from '../../common/Main';
-import Section from '../../common/Section';
+import Main from '../../../common/Main';
+import Section from '../../../common/Section';
 
-function Author() {
+function AboutPage() {
 
     return (
         <>
@@ -45,4 +45,4 @@ function Author() {
     );
 };
 
-export default Author;
+export default AboutPage;

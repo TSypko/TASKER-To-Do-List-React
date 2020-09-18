@@ -15,7 +15,7 @@ const Menu = () => {
               <LinkItem to="/tasks">Tasks list</LinkItem>
             </ListItem>
             <ListItem>
-            <LinkItem to="/author">About</LinkItem>
+            <LinkItem to="/about">About</LinkItem>
             </ListItem>
           </List>
         </nav>
