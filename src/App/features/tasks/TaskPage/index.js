@@ -30,7 +30,7 @@ function TaskPage() {
                 />
                 :
                 <Section
-                    title="Sorry, task not found"
+                    title="Sorry, task not found :("
                 />
             }
         </Main>
