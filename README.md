@@ -5,21 +5,23 @@
 # TASKER - TO DO LIST MANAGMENT
 **LIVE LINK:** [https://tsypko.github.io/TASKER-To-Do-List-React/](https://tsypko.github.io/TASKER-To-Do-List-React/)
 
-- v. 1.3.0 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- v. 1.5.0 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## DESCRIPTION
 To Do List app created during ,*,Become A Front End Developer"* course provided by *Youcode Academy*.
 It helps in scheduling tasks, allowing you to add, check, edit and delete them.
-Tasks will be saved in local storage memory of your brower.
+Tasks will be saved in local storage memory of your browser.
 
 ### TECHNOLOGIES USED:
 
 - React
 - creat-react-app
+- Redux with react-redux,
+- Redux Saga,
+- React Router
 - HTML
 - CSS
 - JavaScript ES6+
-- Redux with react-redux,
 - Styled Components
 - npm
 - localstorage
@@ -60,6 +62,11 @@ Please feel free to contact with author: [tsypko@gmail.com](tsypko@gmail.com)
 
 ### VERSION HISTORY
 
+- v. 1.5.0 - added React Router integration with Menu and new subpages
+    - "Task List",
+    - "Task details",
+    - "About",
+- v. 1.4.0 - added Redux Saga integration and "Download Example Tasks" feature
 - v. 1.3.0 - added React Redux integration
 - v. 1.2.1 - added task creation and last edition time & date
 - v. 1.2.0 - added EDIT functionality
