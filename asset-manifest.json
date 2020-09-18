@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/TASKER-To-Do-List-React/static/js/main.bd231c5b.chunk.js",
-    "main.js.map": "/TASKER-To-Do-List-React/static/js/main.bd231c5b.chunk.js.map",
+    "main.js": "/TASKER-To-Do-List-React/static/js/main.86c6ad8d.chunk.js",
+    "main.js.map": "/TASKER-To-Do-List-React/static/js/main.86c6ad8d.chunk.js.map",
     "runtime-main.js": "/TASKER-To-Do-List-React/static/js/runtime-main.bc960137.js",
     "runtime-main.js.map": "/TASKER-To-Do-List-React/static/js/runtime-main.bc960137.js.map",
-    "static/js/2.1ba30cac.chunk.js": "/TASKER-To-Do-List-React/static/js/2.1ba30cac.chunk.js",
-    "static/js/2.1ba30cac.chunk.js.map": "/TASKER-To-Do-List-React/static/js/2.1ba30cac.chunk.js.map",
+    "static/js/2.54978339.chunk.js": "/TASKER-To-Do-List-React/static/js/2.54978339.chunk.js",
+    "static/js/2.54978339.chunk.js.map": "/TASKER-To-Do-List-React/static/js/2.54978339.chunk.js.map",
     "index.html": "/TASKER-To-Do-List-React/index.html",
-    "precache-manifest.fe7927e641cf64173492a4e9aecb7105.js": "/TASKER-To-Do-List-React/precache-manifest.fe7927e641cf64173492a4e9aecb7105.js",
+    "precache-manifest.a8918778f068071b2539337c29ccb0b5.js": "/TASKER-To-Do-List-React/precache-manifest.a8918778f068071b2539337c29ccb0b5.js",
     "service-worker.js": "/TASKER-To-Do-List-React/service-worker.js",
-    "static/js/2.1ba30cac.chunk.js.LICENSE.txt": "/TASKER-To-Do-List-React/static/js/2.1ba30cac.chunk.js.LICENSE.txt",
+    "static/js/2.54978339.chunk.js.LICENSE.txt": "/TASKER-To-Do-List-React/static/js/2.54978339.chunk.js.LICENSE.txt",
     "static/media/checked.svg": "/TASKER-To-Do-List-React/static/media/checked.ecbb07b3.svg",
     "static/media/logo.svg": "/TASKER-To-Do-List-React/static/media/logo.369e0d03.svg",
     "static/media/pen.svg": "/TASKER-To-Do-List-React/static/media/pen.0bfe9232.svg",
@@ -17,7 +17,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bc960137.js",
-    "static/js/2.1ba30cac.chunk.js",
-    "static/js/main.bd231c5b.chunk.js"
+    "static/js/2.54978339.chunk.js",
+    "static/js/main.86c6ad8d.chunk.js"
   ]
 }
